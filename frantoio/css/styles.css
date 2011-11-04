@@ -1,0 +1,401 @@
+body {
+	color: #333;
+	margin: 40px 0 0 30px;
+	padding: 0 0 30px 0;
+	background: url(/i/tile.png);
+	font: 13px/19px Hevetica Neue, Helvetica, Arial, sans;
+	text-shadow: 0 1px 1px #fff;
+}
+
+@font-face {
+	font-family: 'OFLSortsMillGoudyRegular';
+	src: url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-webfont.eot');
+	src: local('☺'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-webfont.woff') format('woff'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-webfont.ttf') format('truetype'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-webfont.svg#webfontwzHaehaw') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OFLSortsMillGoudyItalic';
+	src: url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-Italic-webfont.eot');
+	src: local('☺'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-Italic-webfont.woff') format('woff'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-Italic-webfont.ttf') format('truetype'), url('/css/fonts/OFL-Sorts-Mill-Goudy/OFLGoudyStM-Italic-webfont.svg#webfontRrg0pQHE') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+a { color: #720000; }
+a:hover { color: #456102; }
+
+p {
+	margin-bottom: 7px;
+}
+h1 {
+	font: 42px/42px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+	margin-bottom: 10px;
+	letter-spacing: -2px;
+	color: #000;
+	text-shadow: none;
+}
+h2 {
+	font: 24px/24px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+	margin-bottom: 7px;
+	letter-spacing: -1px;
+	text-shadow: none;
+}
+h3 {
+	font: 18px/22px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+	margin-bottom: 7px;
+	text-shadow: none;
+}
+.col { 
+	float: left; 
+	margin-left: 20px;
+	position: relative;
+}
+.col:first-child { margin-left: 0;}
+
+.col-1 { width: 144px;}
+.col-2 { width: 308px;}
+.col-3 { width: 472px;}
+.col-4 { width: 636px;}
+.col-5 { width: 800px;}
+.col-6 { } /*intentionally blank */
+
+.wrapper {
+	width: 964px;
+}
+#header {
+	height: 67px;
+	position: relative;
+}
+	#header #logo  {
+		position: absolute;
+		top: -17px;
+		left: 0;
+		background: url(/i/logo.png) no-repeat;
+		width: 93px;
+		padding-top: 57px;
+	}
+	#header #nav  {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	#header #nav li {
+		color: #888;
+		float: left;
+		margin-left: 30px;
+	}
+	#default li#nav-home a,
+	#menus li#nav-menus a,
+	#about li#nav-about a,
+	#private li#nav-private a,
+	#olive li#nav-olive a {
+		color: #000
+	}
+	
+	#header #nav li a {
+		font: 27px/23px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+		letter-spacing: -1px;
+		display: block;
+	}
+	#header #nav li span {
+		margin-top: -5px;
+	}
+
+#page-header {
+	margin-bottom: 30px;
+}
+#page-header #promo {
+	height: 130px;
+	background: url(/i/redbox-interior.png);
+	margin-bottom: 20px;
+	color: #fff;
+	position: relative;
+}
+#page-header #promo div {
+	padding: 20px 0 0 25px;
+	font: 51px/65px OFLSortsMillGoudyItalic,Georgia,Times,serif;
+	text-shadow: 0 -1px 1px #5d0909;
+	letter-spacing: -3px;
+	color: #b26262;
+}
+#page-header #promo a.btn {
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+}
+#page-header #promo p {
+	text-shadow: 0 -1px 1px #333;
+	margin-bottom: 30px;
+}
+	#default #page-header #promo {
+		height: 220px;
+		background: url(/i/redbox-home.png);
+		padding: 20px 25px;
+		font: 22px/28px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+		letter-spacing: 0;
+	}
+#page-header #details-wrap {
+	height: 50px;
+	padding: 10px 15px;
+	color: #333;
+	line-height: 17px;
+	position: relative;
+}
+#page-header #details {
+	position: relative;
+	z-index: 2;
+}
+#page-header #details span {
+	color: #777;
+}
+#page-header #main-img {
+	height: 220px;
+	background: #000;
+	margin-left: -30px;
+	width: 666px;
+}
+	#default #page-header #main-img {
+		height: 350px;
+		background: url(/images/3.jpg);
+	}
+	#menus #main-img {
+		background: url(/images/5.jpg);
+	}
+	#about #main-img {
+		background: url(/images/7.jpg);
+	}
+	#private #main-img {
+		background: url(/images/6.jpg);
+	}
+	#olive #main-img {
+		background: url(/images/8.jpg);
+	}
+	
+#content {
+	margin-bottom: 50px;
+}	
+	#content .col-2 {
+		margin-top: 56px;
+	}	
+	#content .col-4 p {
+		text-align: justify; text-justify: newspaper
+	}	
+	#content h2 {
+		margin-top: 20px;
+		font-size: 20px;
+	}	
+	#content #olive-promo {
+		font: 18px/18px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+		border: 2px solid #ddd;
+		padding: 15px 91px 15px 20px;
+		background: #fff url(/i/oil-bottle.jpg) 204px -2px no-repeat;
+	}
+	#content #olive-promo p {
+		margin-bottom: 15px;
+	}
+
+#callouts {
+	margin-bottom: 10px;
+}
+#callouts a {
+	font-weight: bold;
+}
+#reserve-wrapper {
+	position: relative;
+}
+#reserve {
+	padding: 10px 15px;
+	font-weight: bold;
+	font-size: 12.5px;
+	position: relative;
+	z-index: 2;
+	color: #666;
+}
+#reserve span {
+	color: #333;
+}
+.opacity-bkg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: #555;
+	opacity: .1;
+	filter: alpha(opacity = 10)\9;
+}
+#footer {
+	margin-top: 20px;
+	color: #aaa;
+	font-size: 12.1px;
+}
+#footer #facebook, 
+#footer #newsletter {
+	float: right;
+	position: relative;
+	top: -3px;
+	color: #666;
+	margin-left: 15px
+}
+	#footer #newsletter .icon,
+	#footer #facebook .icon {
+		height: 16px;
+		width: 12px;
+		display: inline-block;
+		margin-right: 5px;
+		background: url(/i/newsletter.png);
+		position: relative;
+		top: 2px;
+	}
+	#footer #facebook .icon {
+		width: 16px;
+		background: url(/i/facebook.png);
+	}
+	#footer #newsletter:hover {
+		color: #456102;
+	}
+	#footer #facebook:hover {
+		color: #0154a0;
+	}
+	#footer #newsletter:hover .icon,
+	#footer #facebook:hover .icon {
+		background-position: 0 -16px;
+	}
+
+/* tabs */
+
+
+.tabs .tabs-nav {
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 10px;
+}
+.tabs .tabs-nav li {
+	border-bottom: none;
+	float: left;
+	position: relative;
+	margin-left: 15px
+}
+.tabs .tabs-nav li:first-child {
+	margin-left: 0;
+}
+.tabs .tabs-nav li a {
+	display: block;
+	float: left;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #fff;
+	height: 25px;
+	font: 16px/17px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+}
+.tabs .tabs-nav li.active a {
+	color: #333;
+}
+
+#menu-tabs, #about-tabs {
+	margin-top: 30px;
+}
+#menu-tabs .tab-content em {
+	float: right;
+	*zoom: 100%; 
+	*overflow: hidden;
+
+}
+#menu-tabs table {
+	width: 100%;
+}
+#menu-tabs table td {
+	padding: 2px 5px;
+	text-align: right;
+	white-space: nowrap;
+}
+#menu-tabs table tr td:first-child {
+	text-align: left;
+	white-space: normal;
+	padding-left: 0;
+}
+
+/* buttons */
+.btn {
+	display: inline-block;
+	background: #990000;
+	padding: 5px 10px 6px;
+	font: bold 13px/13px Hevetica Neue, Helvetica, Arial, sans;
+	color: #fff;
+	text-shadow: 0 -1px 1px #6e0000;
+	border: 1px solid #6e0000;
+}
+.btn:hover {
+	color: #4d0000;
+	background: #fff;
+	text-shadow: none;
+}
+.btn-dark {
+	background: #4d0000;
+	color: #fff;
+	text-shadow: none;
+	border: 1px solid #9a4444;
+}
+.btn-dark:hover {
+	color: #4d0000;
+	background: #fff;
+}
+
+/* Contact Form */
+
+#contact   {
+	padding-top: 30px;
+}
+#contact h3  {
+	padding-bottom: 10px;
+}
+#contact .zemContactForm  {
+	font-size: 11px;
+}
+#contact .zemContactForm legend {
+	display: none;
+}
+#contact .zemContactForm label {
+	font-weight: bold;
+}
+#contact .zemContactForm .zemText {
+	width: 200px;
+}
+#contact .zemContactForm input, #contact form textarea {
+	margin: 3px 0 10px;
+	border: 1px solid #ccc;
+	padding: 6px 4px 5px;
+	font-size: 11px;
+	font-family: Helvetica, Arial, sans;
+}
+#contact form textarea {
+	height: 68px;
+}
+#contact .zemContactForm .zemSubmit {
+	background: #990000;
+	cursor: pointer;
+	color: #fff;
+	padding: 5px;
+	margin-top: 15px;
+	border: none;
+	font-weight: bold;
+	width: 115px;	
+	font-family: Helvetica, Arial, sans;
+	border: 1px solid #6E0000;
+	font-size: 13px;
+}
+#contact .zemContactForm .zemSubmit:hover {
+	background: #fff;
+	color: #990000;
+}
+
+#contact .zemContactForm .zemError {
+	color: #000;
+	margin-bottom: 15px;
+	padding: 3px 8px;
+	background: #bce782;
+}
+#contact .zemThanks {
+	font-weight: bold;
+}

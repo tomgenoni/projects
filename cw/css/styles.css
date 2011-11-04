@@ -1,0 +1,257 @@
+body {
+	color: #111;
+	background: #222 url(/i/bkg.png);
+	font: 13px/21px Georgia, Times, serif;
+	padding-bottom: 30px;
+	margin-top: 4px;
+}
+
+a { color: #CAE3B7; text-decoration: none }
+a:hover { color: #fff6e6 }
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 10px;
+}
+#section-top {
+	position: relative;
+	border-bottom: 3px solid #111;
+}
+#section-top .wrapper {
+	height: 440px;
+}
+#section-top #img-cycle {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 440px;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+#front #img-cycle { background-image: url(/images/7.jpg); }
+#about #img-cycle { background-image: url(/images/6.jpg); }
+#beneficiaries #img-cycle { background-image: url(/images/5.jpg); }
+#menus #img-cycle { background-image: url(/images/4.jpg); }
+#press #img-cycle { background-image: url(/images/3.jpg); }
+
+
+
+#main-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main-nav li {
+	float: left;
+	margin-left: 3px;
+	position: relative;
+}
+#main-nav li a {
+	display: block;
+	padding: 5px 10px;
+	position: relative;
+	z-index: 1;
+	color: #333;
+	font-size: 15px;
+	font-style: italic;
+	*top: -3px;
+}
+#main-nav li span {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background: #fff;
+	opacity: .7;
+	filter:alpha(opacity=70);
+	*bottom: 3px;
+}
+
+#about #nav-about a,
+#menus #nav-menus a,
+#beneficiaries #nav-beneficiaries a,
+#press #nav-press a,
+#blog #nav-blog a {
+	background: #222 url(/i/bkg.png);
+	color: #fff;
+	text-shadow: 0 -1px 1px #000;
+}
+
+#main-content {
+	padding: 40px 0;
+	color: #bbb;
+	text-shadow: 0 -1px 1px #000;
+}
+	h1 {
+		font-size: 36px;
+		line-height: 36px;
+		font-weight: normal;
+		letter-spacing: -1px;
+		margin-bottom: 25px;
+		color: #ddd;
+	}
+	h2 {
+		font-size: 23px;
+		line-height: 23px;
+		font-weight: normal;
+		letter-spacing: -1px;
+		margin: 20px 0 15px;
+		font-style: italic;
+		color: #ddd;
+	}
+	#main-content p, #main-content ul {
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+
+.col {
+	float: left;
+	width: 30%;
+	margin-right: 3%
+}
+.col-2 {
+	width: 64%;
+}
+#logo-wrap {
+	position: absolute;
+	top:100px;
+	left: 10px;
+}
+
+	#logo {
+		background: url(/i/cw-sprite.png) no-repeat;
+		width: 314px;
+		height: 43px;
+		position: relative;
+		z-index: 1;
+		display: block;
+	}
+
+	#logo-wrap #tagline {
+		font-size: 13px;
+		line-height: 32px;
+		font-weight: normal;
+		margin-top: 4px;
+		padding-left: 20px;
+		color: #000;
+		position: relative;
+		z-index: 1;
+	}
+	
+	#about #logo,
+	#menus #logo,
+	#beneficiaries #logo,
+	#press #logo { background-position: bottom left; }
+	
+	#about #tagline,
+	#menus #tagline,
+	#beneficiaries #tagline,
+	#press #tagline { color: #fff; }
+
+
+#footer {
+	color: #bbb;
+	margin-bottom: 20px;
+	font-size: 12.1px;
+}
+#footer .fltR a {
+	margin-left: 10px;
+}
+#open-table {
+	background: #2a2a2a;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	position: relative;
+}
+#open-table span.title {
+	color: #fff;
+}
+
+#newsletter .icon,
+#menu .icon,
+#facebook .icon,
+#twitter .icon,
+#blog .icon {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background: url(/i/cw-sprite.png) -11px -44px no-repeat;
+	margin-right: 5px;
+	position: relative;
+	top: 1px;
+	*top: -2px
+}
+#twitter .icon {
+	background-position: 0 -44px 
+	}
+#newsletter .icon {
+	background-position: -44px -44px 
+	}
+#blog .icon {
+	background-position: -22px -44px 
+}
+#menu .icon {
+	background-position: -33px -44px 
+}
+
+.press-list {
+	list-style: disc;
+	margin-left: 20px;
+}
+.press-list li {
+	margin-bottom: 7px;
+}
+
+
+/* tabs */
+
+
+.tabs .tabs-nav {
+	margin: 20px 0 10px;
+	border-bottom: 2px solid #2a2a2a;
+	*overflow: hidden;
+}
+.tabs .tabs-nav li {
+	border-bottom: none;
+	float: left;
+	position: relative;
+}
+.tabs .tabs-nav li:first-child {
+	margin-left: 0;
+}
+.tabs .tabs-nav li a {
+	display: block;
+	float: left;
+	font-weight: bold;
+	height: 25px;
+	font: 16px/17px OFLSortsMillGoudyRegular,Georgia,Times,serif;
+	padding: 5px 10px 0;
+}
+.tabs .tabs-nav li.active a {
+	color: #fff;
+	background: #2a2a2a;
+}
+
+.tabs .tab-content em {
+	float: right;
+	*zoom: 100%; 
+	*overflow: hidden;
+}
+.tabs table,
+.tabs h2 {
+	margin-left: 10px;
+}
+.tabs table {
+	width: 100%;
+}
+.tabs table td {
+	padding: 0 5px 5px 0;
+	text-align: right;
+}
+.tabs table tr td:first-child {
+	width: 90%;
+	text-align: left;
+}

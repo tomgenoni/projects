@@ -1,0 +1,59 @@
+<txp:zem_contact to="chef@comingrightup.com" label="" thanks="text" redirect="/thanks" subject="Coming Right Up Quote Request">
+
+<ul>
+	<li>
+		<txp:zem_contact_text break="" label="Name" />
+	</li>
+	<li class="large">
+		<txp:zem_contact_text break="" label="Restaurant" />
+	</li>
+	<li>
+		<txp:zem_contact_email break="" />
+		<p class="note">I will use your email only to get back to you.</p>
+	</li>
+	<li class="small">
+		<txp:zem_contact_text break="" label="Phone" required="0" />
+	</li>
+	<li class="section group-radio">
+		<h3>Is this a new website or a redesign?</h3>
+		<txp:zem_contact_radio label="New Website" checked="1" group="Job" />
+		<txp:zem_contact_radio label="Redesign" />
+	</li>
+	<li class="large">
+		<txp:zem_contact_text break="" max="999" label="If it's a redesign what is your current URL?" required="0" />
+	</li>
+	<li class="group-radio">
+		<h3>Approximately how many pages will your website have?</h3>
+		<txp:zem_contact_radio label="3" checked="1" group="Number of Pages" />
+		<txp:zem_contact_radio label="4" />
+		<txp:zem_contact_radio label="5" />
+		<txp:zem_contact_radio label="6" />
+		<txp:zem_contact_radio label="7" />
+		<txp:zem_contact_radio label="8" />
+		<txp:zem_contact_radio label="9 or more" />
+	</li>
+	<li class="large">
+		<txp:zem_contact_textarea break="" cols="" rows="" label="Are there any websites that you like? Why?" required="0" />
+		<p class="note">Examples could include page elements like headers, menus,<br />sidebars, colors, typography or photos.</p>
+	</li>
+	<li class="section group-radio">
+		<h3>Would you like to integrate Facebook or Twitter feeds?</h3>
+		<txp:zem_contact_radio label="Yes" checked="1" group="Social Media Feeds" />
+		<txp:zem_contact_radio label="No" />
+	</li>
+	<li class="group-radio">
+		<h3>Would you like an optimized iPhone version of your site?</h3>
+		<txp:zem_contact_radio label="Yes" checked="1" group="iPhone Version" />
+		<txp:zem_contact_radio label="No" />
+	</li>
+	<li class="large">
+		<txp:zem_contact_textarea break="" cols="" rows="" label="Anything else you'd like me to know?" required="0" />
+	</li>
+	<li>
+		<txp:zem_contact_submit label="Submit" />
+	</li>
+</ul>
+
+
+
+</txp:zem_contact>

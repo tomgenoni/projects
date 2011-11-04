@@ -1,0 +1,1 @@
+<txp:php> echo htmlspecialchars($GLOBALS['thisarticle']['url_title']);</txp:php>

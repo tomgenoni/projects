@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title></title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/opentable.css">
+
+</head>
+<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+	<div id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>">
+	
+	<div id="section-top" class="section">
+		<div id="img-cycle"></div>
+		<div class="wrapper">
+			<ul id="main-nav">
+				<li id="nav-about"><a href="/about">About Us</a><span></span></li>
+				<li id="nav-menus"><a href="/menus">Menus</a><span></span></li>
+				<li id="nav-beneficiaries"><a href="/beneficiaries">Beneficiaries</a><span></span></li>
+				<li id="nav-press"><a href="/press">Press</a><span></span></li>
+			</ul>
+			<div id="logo-wrap">
+				<a href="/" id="logo"></a>
+				<div id="tagline">
+					A progressive American restaurant in San Francisco's Mission district.
+				</div>
+			</div>
+		</div>
+	</div>

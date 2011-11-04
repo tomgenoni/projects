@@ -1,0 +1,50 @@
+
+
+		<ul id="img-wrap">
+		    <txp:variable name="first-pass" value="true" />
+
+            <txp:smd_each include="article_image" subset="2">
+                <txp:smd_if field="txpvar:first-pass" operator="eq" value="true">
+                    <li>
+								<txp:upm_image image_id="{smd_var_value}" form="photo_credit" />
+                        <txp:image id="{smd_var_value}" />
+                    </li>
+                <txp:else />
+                    <li style="display:none;">
+								<txp:upm_image image_id="{smd_var_value}" form="photo_credit" />
+                        <txp:image id="{smd_var_value}" />
+                    </li>
+                </txp:smd_if>
+		        <txp:variable name="first-pass" value="false" />
+            </txp:smd_each>
+        </ul>
+
+
+
+		    <txp:variable name="link-number" value="1" />
+
+		    <ul id="img-counter" class="clearfix">
+
+                <txp:smd_each include="article_image" subset="2">
+
+                    <txp:smd_if field="{smd_var_total}" operator="gt" value="1">
+
+                        <txp:smd_if field="txpvar:link-number" operator="eq" value="1">
+                            <li class="active-counter-item"><a href="#">1</a></li>
+                        <txp:else />
+                            <li><a href="#"><txp:variable name="link-number" /></a></li>
+                        </txp:smd_if>
+
+                        <txp:adi_calc name="link-number" add="1" />
+
+                    </txp:smd_if>
+
+                </txp:smd_each>
+
+		    </ul>
+
+		<div id="main-item-description">
+			<h1><txp:title /></h1>
+			<div class="location"><txp:excerpt /></div>
+			<div class="description"><txp:body /></div>
+		</div>

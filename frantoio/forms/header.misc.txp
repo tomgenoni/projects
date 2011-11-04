@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title><txp:page_title /></title>
+
+	<link href="/css/reset.css" type="text/css" rel="stylesheet"/>
+
+<txp:php>
+	$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+	$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+	$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+	$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+	
+	if ( !$iphone && !$android  && !$palmpre  && !$$ipod ) {
+		echo '<link href="/css/styles.css" type="text/css" rel="stylesheet"/>';
+		echo '<link href="/css/opentable.css" type="text/css" rel="stylesheet"/>';
+		echo '<!--[if IE 7]><link href="/css/ie7.css" type="text/css" rel="stylesheet"/><![endif]-->';
+		echo '<!--[if IE 8]><link href="/css/ie8.css" type="text/css" rel="stylesheet"/><![endif]-->';
+	} else {
+		echo '<link href="/css/mobile.css" type="text/css" rel="stylesheet"/>';
+		echo '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />';
+	}
+</txp:php>
+
+	<meta name="description" content="Frantoio Italian Restaurant located in Mill Valley, California, an easy drive from Marin, Tiburon, Sausalito, Larkspur, San Rafael, San Francisco. The only restaurant in the United States with traditional olive crushing and olive oil making." />
+	<meta name="keywords" content="frantoio, italian restaurant, mill valley, san francisco, marin, olive oil, crush olives, sausalito, san francisco" />	
+
+	<link rel="home" href="<txp:site_url />" />
+
+	<txp:rsd />
+</head>
+
+<body id="<txp:section />">
+
+<div class="wrapper">
+	<div id="header">
+		<a id="logo" class="clearlink" href="/">Frantoio</a>
+		<ul id="nav">
+			<li id="nav-home"><a href="/">Home</a><span>Welcome Back</span></li>
+			<li id="nav-menus"><a href="/menus">Menus</a><span>Something Special</span></li>
+			<li id="nav-about"><a href="/about">About</a><span>We're a Family</span></li>
+			<li id="nav-private"><a href="/private">Private Parties</a><span>Come Join Us</span></li>
+			<li id="nav-olive"><a href="/olive">Olive Oil</a><span>Organic, Delivered</span></li>
+		</ul>
+	</div>
+	<div id="page-header" class="clearfix">
+		<div id="main-img" class="col col-4"></div>
+		<div class="col col-2">
+			<div id="promo">
+				<txp:if_section name="default">
+					<txp:article_custom form="body" id="20" />
+				<txp:else />
+					<div><txp:section title="1" /></div>
+				</txp:if_section>				
+			</div>
+			<div id="details-wrap">
+				<div id="details"><txp:article_custom form="body" id="21" /></div>
+				<div class="opacity-bkg"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+
+	
+	
+
+

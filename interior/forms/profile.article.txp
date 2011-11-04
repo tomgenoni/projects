@@ -1,0 +1,7 @@
+<h1 class="spacer"><txp:title /></h1>
+<div class="block-1">
+	<txp:article_image />
+</div>
+<div class="block-2">
+	<txp:body />
+</div>

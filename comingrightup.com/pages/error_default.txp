@@ -1,0 +1,15 @@
+<txp:output_form form="header" />
+<body id="internal">
+	<div class="wrapper">
+		<a href="/" id="logo" class="clearLink"></a>
+		<div class="copy">
+			<h1>Bummer</h1>
+			<p>Oh dear. It seems this page doesn't exist. I have no idea what happened. </p>
+			<div class="buttons clearfix">
+			 <a href="/" class="btn">Start Over</a>
+			</div>
+		</div>
+		<div id="face"></div>
+	</div>
+</body>
+<txp:output_form form="footer" />

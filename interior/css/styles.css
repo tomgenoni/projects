@@ -1,0 +1,248 @@
+body {
+	background: #4c3327;
+	font: 13px/17px "Helvetica Neue",Helvetica, Arial, sans;
+	color: #333;
+	padding-bottom: 30px;
+	margin-top: 4px;
+}
+
+a {
+	color:#67430f;
+	text-decoration:none;
+}
+a:hover {
+	color:#bf5500;
+}
+
+h1 {
+	font-size: 33px;
+	line-height: 33px;
+	letter-spacing: -1px;
+	color: #333;
+	font-weight: normal;
+}
+h1.spacer {
+	margin-bottom: 20px;
+}
+
+#main-item-description .location {
+	font-size: 13px;
+	color: #666;
+}
+h2 {
+	font-size: 13px;
+}
+
+
+.outer-wrapper {
+	background: #fff url(/i/bkg.png);
+	padding: 40px 0 80px;
+}
+
+.wrapper, #footer {
+	width: 820px;
+	margin: 0 auto;
+}
+#footer {
+	padding-top: 15px;
+	font-size: 11px;
+	color: #fff5E0;
+}
+#footer a {
+	color: #fff5e0;
+}
+#top-bar {
+	background: #333;
+	font-size: 1px;
+	height: 6px;
+	margin-bottom: 40px;
+}
+
+
+#header {
+	margin-bottom: 34px;
+}
+#header #logo {
+	padding-top: 21px;
+	width: 252px;
+	background: url(/i/logo.png) no-repeat;
+}
+
+#sidebar {
+	width: 160px;
+	float: right;
+}
+#main-col {
+	width: 600px;
+	float: left;
+}
+#main-col p {
+	padding-bottom: 8px;
+}
+
+#nav ul {
+	padding: 5px 0;
+}
+#nav li {
+	padding-bottom: 10px;
+	font-size: 11px;
+	
+}
+#nav li.category {
+	padding-left: 0;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+#nav li li {
+	line-height: 15px;
+	padding: 3px 0 4px 0;
+	border-bottom: 1px solid #eee;
+}
+
+#nav li li.active a  {
+	color: #bf5500;
+	cursor: default;
+}
+#portfolio #nav li.section-1 h2 a,
+#profile #nav li.section-2 h2 a,
+#contact #nav li.section-3 h2 a {
+	color: #333;
+	cursor: default;
+}
+
+#img-wrap {
+	position: relative;
+	height:515px;
+	border-bottom: 2px solid #000;
+	font-size: 11px;
+}
+#img-wrap li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#img-wrap li .credit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 1px 6px;
+	background: #fff;
+	opacity: .7;
+	filter: alpha(opacity = 70);
+}
+#img-title-bkg, #img-title  {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#img-title-bkg {
+	background: #000;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6;
+	-khtml-opacity: 0.6;
+	opacity: 0.6;
+	height: 45px;
+}
+#img-title {
+	padding: 3px 15px;
+	color: #fff;
+	line-height: 13px;
+}
+#img-title h3 {
+	font-size: 11px;
+}
+
+
+
+#img-counter {
+	margin-bottom: 15px;
+}
+#img-counter li {
+	float: left;
+	padding-right: 2px;
+	font-size: 11px;
+}
+#img-counter li a {
+	float: left;
+	padding: 0 7px 2px 7px;
+	color: #fff;
+	background: #4c3327;
+	font-weight: bold;
+}
+	#img-counter li a:hover {
+		background: #b9a290
+	}
+#img-counter li.active-counter-item a {
+	background: #000;
+	cursor: default;
+}
+
+
+#profile .block-1 {
+	float:left;
+}
+#profile .block-2 {
+	float:right;
+	width: 390px;	
+	font-size: 11px;
+}
+#profile #main-col h2 {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+#profile #main-col h3 {
+	font-size: 13px;
+	margin: 15px 0 10px;
+}
+
+/* Contact Form */
+
+#contact .zemContactForm  {
+	font-size: 11px;
+	padding-top: 20px
+}
+#contact .zemContactForm legend {
+	display: none;
+}
+#contact .zemContactForm label {
+	font-weight: bold;
+}
+#contact .zemContactForm .zemText {
+	width: 200px;
+}
+#contact .zemContactForm input, #contact form textarea {
+	margin: 3px 0 10px;
+	border: 1px solid #ccc;
+	padding: 6px 4px 5px;
+	font-size: 11px;
+	font-family: Helvetica, Arial, sans;
+}
+#contact form textarea {
+	height: 68px;
+}
+#contact .zemContactForm .zemSubmit {
+	background: #7c6c56;
+	text-transform: lowercase;
+	cursor: pointer;
+	color: #fff;
+	padding: 5px;
+	margin-top: 15px;
+	border: none;
+	font-weight: bold;
+	width: 100px;	
+	font-family: Helvetica, Arial, sans;
+}
+#contact .zemContactForm .zemSubmit:hover {
+	background: #BF5500;
+}
+
+#contact .zemContactForm .zemError {
+	color: #000;
+	margin-bottom: 15px;
+	padding: 3px 8px;
+	background: #bce782;
+}
+#contact .zemThanks {
+	font-weight: bold;
+}

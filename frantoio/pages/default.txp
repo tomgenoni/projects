@@ -1,0 +1,73 @@
+<txp:output_form form="header" />
+
+	<txp:if_section name="default">
+		<div id="callouts" class="clearfix">
+			<div class="col col-2">
+				<txp:article_custom form="callout" id="16" />
+			</div>
+			<div class="col col-2">
+				<txp:article_custom form="callout" id="17" />
+			</div>
+			<div class="col col-2">
+				<txp:article_custom form="callout" id="18" />
+			</div>
+		</div>
+	<txp:else />
+
+	<div id="content" class="clearfix">
+		<div class="col col-4">
+			
+		<txp:article limit="1" /> 
+		
+		<txp:if_section name="menus">
+			<div class="tabs" id="menu-tabs">
+				<ul class="tabs-nav clearfix">
+					<txp:article_custom form="menu-tab-titles" category="menus-entries"  />
+				</ul>
+				<txp:article_custom form="menu-tab-body" category="menus-entries"  />
+			</div>
+		</txp:if_section>				
+
+		<txp:if_section name="private">
+			<div class="tabs" id="menu-tabs">
+				<ul class="tabs-nav clearfix">
+					<txp:article_custom form="menu-tab-titles" category="private-entries"  />
+				</ul>
+				<txp:article_custom form="menu-tab-body" category="private-entries"  />
+			</div>
+		</txp:if_section>	
+					
+		<txp:if_section name="about">
+			<div class="tabs" id="about-tabs">
+				<ul class="tabs-nav clearfix">
+					<txp:article_custom form="menu-tab-titles" category="about-entries"  />
+				</ul>
+				<txp:article_custom form="menu-tab-body" category="about-entries"  />
+			</div>
+			<div id="contact">
+				<h3>Questions? Comments? Contact Us</h3>
+				<txp:zem_contact to="tom@atomeye.com">
+				<txp:zem_contact_text label="Name" /><br />
+				<txp:zem_contact_email /><br />
+				<txp:zem_contact_textarea cols="45" label="Message" /><br />
+				<txp:zem_contact_submit label="Send Message" />
+				</txp:zem_contact>
+			</div>
+		</txp:if_section>				
+
+		</div>
+		<div class="col col-2">
+			<txp:if_section name="olive">
+				<!-- some promo here -->
+			<txp:else />
+				<div id="olive-promo">
+					<p>During the crushing season you can watch our entire olive oil making process.</p>
+					<a href="/olive" class="btn">Learn More</a>
+				</div>
+			</txp:if_section>
+		</div>
+	</div>
+
+	</txp:if_section>				
+
+<txp:output_form form="footer" />

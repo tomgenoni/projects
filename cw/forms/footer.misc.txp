@@ -1,0 +1,25 @@
+		<div id="footer">
+			<div class="wrapper">
+				<div id="open-table">
+					Make your reservation with <span class="title">OpenTable</span>
+					<div id="OT_bkg_btn">Find a Table</div>
+					<script type="text/JavaScript" src="http://www.opentable.com/ism/?rid=47224"></script>
+					<noscript id="OT_noscript"><a href="http://www.opentable.com/single.aspx?rid=1573&restref=47224&rtype=ism">Reserve Now on OpenTable.com</a></noscript>
+				</div>
+				<div class="clearfix">
+					<div class="fltR">
+						<a id="twitter" href="http://twitter.com/commonwealth_sf"><span class="icon"></span>Twitter</a> 
+						<a href="http://www.facebook.com/CommonwealthSF" id="facebook"><span class="icon"></span>Facebook</a>
+					</div>
+					<div>
+						<txp:article id="6" form="body" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="/js/functions.js"></script>
+</body>
+</html>

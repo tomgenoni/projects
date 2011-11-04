@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><txp:page_title /></title>
+
+	<meta name="keywords" content="website, restaurant, design, development, san francisco" />
+	<meta name="description" content="Coming Right Up designs and develops websites for restaurants that are easy to update." />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+	<link href="/css/reset.css" type="text/css" rel="stylesheet"/>
+	<link href="/css/styles.css" type="text/css" rel="stylesheet"/>
+	<!--[if lt IE 7]><link href="/css/ie6.css" type="text/css" rel="stylesheet"/><![endif]-->
+	<!--[if IE 7]><link href="/css/ie7.css" type="text/css" rel="stylesheet"/><![endif]-->
+
+</head>

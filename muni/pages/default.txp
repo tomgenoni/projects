@@ -1,0 +1,61 @@
+<txp:output_form form="header" />
+	
+	<div class="wrapper">
+		<!-- <div id="loading">
+				<img src="/i/loading.gif" alt="Loading" height="16" width="16" /><br />loading images, almost there...
+				<div id="control-dimmer"></div>
+		</div> -->
+		<div id="header"></div>
+		<ul id="images">
+			<li style="background:url(/i/patrick.jpg);" class="active-image-item"></li>
+			<li style="background:url(/i/lights.jpg); display:none"></li>
+			<li style="background:url(/i/kali.jpg); display:none"></li>
+			<!-- <li class="active-image-item"><img src="/i/patrick.jpg" width="100%" alt="Patrick"></li>
+			<li style="display:none"><img src="/i/lights.jpg" width="100%" alt="Lights"></li>
+			<li style="display:none"><img src="/i/kali.jpg" width="100%" alt="Kali"></li> -->
+		</ul>
+		<div class="clearfix" id="image-data">
+			<ul id="img-counter" class="clearfix">
+	        <li class="active-counter-item"><a href="#">1</a></li>
+	        <li><a href="#">2</a></li>
+	        <li><a href="#">3</a></li>
+			</ul>
+			
+			<div id="audio">
+				<div id="jquery_jplayer"></div>
+				<a href="#" id="jplayer_play" class="jp-play" tabindex="1">Play</a>
+				<a href="#" id="jplayer_pause" class="jp-pause" tabindex="1">Pause</a>
+				<a href="#" id="jplayer_stop" class="jp-stop" tabindex="1">Stop</a>
+				<div class="jp-progress">
+					<div id="jplayer_load_bar" class="jp-load-bar">
+						<div id="jplayer_play_bar" class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div id="jplayer_play_time" class="jp-play-time"></div>
+				<div id="jplayer_total_time" class="jp-total-time"></div>
+				<div id="jplayer_playlist" class="jp-playlist">House with vocals</div>
+			</div>
+			
+		</div>
+		<div id="content" class="clearfix">
+			<p class="name">Patrick Hubenthal <span>on guitar</span> &middot;  Joe Schmo <span>on violin</span></p>					
+			<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>					
+		</div>
+		<div id="footer">
+			<div id="logo" class="clearlink">munibusk</div>
+			<p><a href="6698ca">The Players</a> &middot; <a href="6698ca">About</a> &middot; an <a href="cycleImages">atomeye</a> project &middot; Copyright &copy; 2010</p>
+		</div>
+	</div>
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="/js/common.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="/js/audio.js"></script>
+
+
+
+<txp:output_form form="footer" />

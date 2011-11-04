@@ -1,0 +1,8 @@
+<txp:output_form form="header" />
+	
+		<div id="maintenance">
+			Sorry, this page can't be found.<br />How about <a href="/">starting over</a>.
+			<img src="i/logo.png" width="61" height="24" alt="Logo" />
+		</div>
+
+<txp:output_form form="footer" />

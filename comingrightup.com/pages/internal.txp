@@ -1,0 +1,11 @@
+<txp:output_form form="header" />
+<body id="internal" class="<txp:section />">
+	<div class="wrapper">
+		<a href="/" id="logo" class="clearLink"></a>
+		<div class="copy">
+			<txp:article />
+		</div>
+		<div id="face"></div>
+	</div>
+</body>
+<txp:output_form form="footer" />

@@ -1,0 +1,5 @@
+<txp:text item="You can also download the" /> 
+<txp:file_download_link>
+<txp:file_download_description />
+</txp:file_download_link>
+<txp:text item="PDF" />

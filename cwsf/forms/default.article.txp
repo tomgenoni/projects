@@ -1,0 +1,13 @@
+<txp:if_individual_article>
+<h1 class="entry-title"><txp:permlink><txp:title /></txp:permlink></h1>
+<txp:else />
+<h3 class="entry-title"><txp:permlink><txp:title /></txp:permlink></h3>
+</txp:if_individual_article>
+
+
+<div class="entry-content">
+<txp:body />
+</div>
+
+<p class="credit"><span>by <txp:author /></span> &middot; <txp:posted /> in <txp:category1 title="1" link="1" />, <txp:category2 title="1" link="1" /></p>
+

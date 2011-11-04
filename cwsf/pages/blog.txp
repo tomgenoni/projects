@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><txp:page_title /></title>
+
+	<link rel="home" href="<txp:site_url />" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
+	<link href=' http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css' />
+	<!--[if IE 7]><link href="/css/ie7.css" type="text/css" rel="stylesheet"/><![endif]-->
+	
+	<txp:feed_link flavor="atom" format="link" label="Atom" />
+	<txp:feed_link flavor="rss" format="link" label="RSS" />
+
+
+	<txp:rsd />
+</head>
+<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>">
+
+<!-- accessibility -->
+<div id="accessibility">
+	<ul>
+		<li><a href="#content"><txp:text item="go_content" /></a></li>
+		<li><a href="#sidebar-1"><txp:text item="go_nav" /></a></li>
+		<li><a href="#sidebar-2"><txp:text item="go_search" /></a></li>
+	</ul>
+</div>
+
+<div id="container">
+
+<!-- head -->
+	<div id="head">
+		<h1 id="site-name"><txp:link_to_home><txp:site_name /></txp:link_to_home></h1>
+		<p id="site-slogan"><txp:site_slogan /></p>
+	</div>
+
+<!-- left -->
+
+	<div id="content">
+<txp:if_category>
+		<h2><txp:category title="1" /></h2>
+
+		<div class="hfeed">
+		<txp:article form="article_listing" limit="5" />
+		</div>
+<txp:else />
+	<txp:if_search>
+		<h2><txp:text item="search_results" />: <txp:page_url type="q" /></h2>
+
+		<div class="divider"></div>
+	</txp:if_search>
+
+		<div class="hfeed">
+		<txp:article limit="5" />
+		</div>
+</txp:if_category>
+
+	
+<txp:if_individual_article>
+		<div class="mb10 clearfix">
+			<div class="fltL"><txp:link_to_prev>&#171; <txp:prev_title /></txp:link_to_prev></div>
+			<div class="fltR"><txp:link_to_next><txp:next_title /> &#187;</txp:link_to_next></div>
+		</div>
+<txp:else />
+		<div class="mb10 clearfix">
+			<div class="fltL"><txp:older>&#171; <txp:text item="older" /></txp:older></div>
+			<div class="fltR"><txp:newer><txp:text item="newer" /> &#187;</txp:newer></div>
+		</div>
+</txp:if_individual_article>
+	</div>
+	
+	<div id="sidebar-1">
+		<h4>Recent Articles</h4>
+		<txp:recent_articles label="" break="li" wraptag="ul" limit="5"/>
+		<h4>Categories</h4>
+		<txp:cbs_category_list section="blog" wraptag="ul" break="li" showcount="true" class="category_list" activeclass="active" />
+	</div>
+
+	<div id="sidebar-2">
+		<h4>Our Friends</h4>
+		<txp:linklist form="Links" category="friends" limit="10" sort="linksort" wraptag="ul" break="li" />
+	</div>
+
+
+<!-- footer -->
+	<div id="foot" class="clearfix">
+		<a href="http://eepurl.com/kL8y">Sign up for our mailing list</a> &middot; &copy; 2010 Commonwealth
+	</div>
+
+</div>
+
+</body>
+</html>

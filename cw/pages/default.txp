@@ -1,0 +1,35 @@
+<txp:output_form form="header" />
+
+	<txp:if_section name="">
+
+	<txp:else />
+		<div class="wrapper">
+			<div id="main-content" class="clearfix">
+				<div class="col col-2">
+					<txp:article />
+						<txp:if_section name="press">
+							<txp:linklist form="links" category="press" sort="linksort" wraptag="ul" class="press-list plain-list" />
+						</txp:if_section>
+						<txp:if_section name="menus">
+							<div class="tabs">
+								<ul class="tabs-nav clearfix">
+									<txp:article_custom form="tab-titles" category="menu-listing"  />
+								</ul>
+								<txp:article_custom form="tab-body" category="menu-listing"  />
+							</div>
+						</txp:if_section>
+						<txp:if_section name="about">
+							<div class="tabs">
+								<ul class="tabs-nav clearfix">
+									<txp:article_custom form="tab-titles" category="about-listing"  />
+								</ul>
+								<txp:article_custom form="tab-body" category="about-listing"  />
+							</div>
+						</txp:if_section>
+				</div>
+			</div>
+		</div>
+		
+	</txp:if_section>
+
+<txp:output_form form="footer" />

@@ -1,0 +1,3 @@
+<txp:output_form form="header" />
+	<txp:article_custom form="profile" id="14" /> 
+<txp:output_form form="footer" />

@@ -1,0 +1,105 @@
+<txp:output_form form="header" />
+<body>
+	<div id="intro">
+		<div class="wrapper">
+			<div id="logo"></div>
+			<h1>Your food is fab.<br />But your website?<br />Not so much.</h1>
+			<div class="buttons">
+				<a href="demo" class="btn">Try the Demo<span></span></a>
+				<a href="quote" class="btn">Get a Quote<span></span></a>
+			</div>
+			<h5>I design and build restaurant websites. I can help.</h5>
+			<div id="hero"></div>
+		</div>
+	</div>
+	<div id="features">
+		<div class="wrapper">
+			<ul class="clearfix">
+				<li class="col col3" id="feature-update">
+					<div class="icon"></div>
+					<h2>Keep Your Menus<br />Up to Date</h2>
+					<p>Log in anytime to update your content, photos, hours, and just about anything else you need to keep current.</p>
+				</li>
+				<li class="col col3" id="feature-design">
+					<div class="icon"></div>
+					<h2>Show Off a Clean, Custom Design</h2>
+					<p>Would you send out a sloppy plate? Your website will be tidy, easy to read and designed to reflect your taste.</p>
+				</li>
+				<li class="col col3" id="feature-charity">
+					<div class="icon"></div>
+					<h2>10% of Profits<br />to Food Charities</h2>
+					<p>Coming Right Up will make a donation on our mutual behalf to international and local groups fighting hunger.</p>
+				</li>
+				<li class="col col3 last" id="feature-twitter">
+					<div class="icon"></div>
+					<h2>Share Your Twitter<br />&amp; Facebook Feeds</h2>
+					<p>Are you a social butterfly on the web?<br />I can integrate your content, so you can stay in touch with your customers.</p>
+				</li>
+				<li class="col col3" id="feature-price">
+					<div class="icon"></div>
+					<h2>It Won't Cost You<br />an Arm and a Leg</h2>
+					<p>With few overhead costs, I won't rip you off with design and development charges. Fees are fair and reasonable.</p>
+				</li>
+				<li class="col col3" id="feature-support">
+					<div class="icon"></div>
+					<h2>60 Days of Support After Launch</h2>
+					<p>Don't worry about being left on your own after your website is live. If you have questions, I've got your back.</p>
+				</li>
+				<li class="col col3" id="feature-guide">
+					<div class="icon"></div>
+					<h2>User's Guide to<br />Point the Way</h2>
+					<p>Like a recipe for success, you'll receive a written user's guide that explains how to update and edit your website.</p>
+				</li>
+				<li class="col col3 last" id="feature-search">
+					<div class="icon"></div>
+					<h2>Search Engine-Friendly Code</h2>
+					<p>Your website will be built to web standards to ensure that when hungry people look for you, they'll find you.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="case">
+		<div class="wrapper clearfix">
+			<div class="col col6">
+				<h3>Case Study</h3>
+				<h4>A16 in San Francisco</h4>
+				<p>The Southern Italian restaurant A16 has been a favorite in San Francisco for years. With an amazing wine selection, fantastic pizzas and desserts, they have everything to make even the most discerning foodie happy. But what they didn't have was a website that was easy to navigate and quick to load.</p>
+				<p>I worked with A16, and their sister restaurant SPQR, to design and develop websites that reflected the ambiance of the restaurants and allowed them to easily update their menus, hours and photography.</p>
+				<p><a href="http://a16sf.com/">View Live Website</a></p>
+			</div>
+			<div class="col col6 last round-5" id="caseImg"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="wrapper">
+			<div id="logoFooter"></div>
+			<div class="clearfix">
+				<div class="col col6">
+					<p><span>Coming Right Up</span> builds websites for restaurants with search engine-friendly, valid, web standard, hand-coded XHTML/CSS. Websites are powered by the open source content management system Textpattern using PHP and MySQL.</p>
+					<p>&copy; <txp:php>echo date('Y');</txp:php>. All Rights Reserved. <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#104;&#101;&#102;&#64;&#99;&#111;&#109;&#105;&#110;&#103;&#114;&#105;&#103;&#104;&#116;&#117;&#112;&#46;&#99;&#111;&#109;">&#99;&#104;&#101;&#102;&#64;&#99;&#111;&#109;&#105;&#110;&#103;&#114;&#105;&#103;&#104;&#116;&#117;&#112;&#46;&#99;&#111;&#109;</a></p>
+				</div>
+				<div class="col col3">
+					<ul>
+						<li class="top"><h3>Design &amp; Development</h3></li>
+						<li><a href="http://textpattern.com/">Textpattern</a></li>
+						<li><a href="http://www.sensible.com/chapter.html">Don't Make Me Think</a></li>
+						<li><a href="http://www.alistapart.com/articles/indefenseofeyecandy">In Defense of Eye Candy</a></li>
+						<li><a href="http://www.patterntap.com/">Pattern Tap</a></li>
+					</ul>
+				</div>
+				<div class="col col3 last">
+					<ul>
+						<li class="top"><h3>Fighting Hunger</h3></li>
+						<li><a href="http://www.sffoodbank.org/">San Francisco Food Bank</a></li>
+						<li><a href="http://www.mowsf.org/">Meals On Wheels of San Francisco</a></li>
+						<li><a href="http://www.actionagainsthunger.org/">Action Against Hunger</a></li>
+						<li><a href="http://feedingamerica.org/">Feeding America</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<txp:output_form form="footer" />

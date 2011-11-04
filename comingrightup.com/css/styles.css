@@ -1,0 +1,316 @@
+
+body {
+	background: url(/i/bodyBkg.png);
+	font: 11px/17px "Lucida Grande", Verdana;
+	color: #ccc;
+	padding-bottom: 60px
+}
+
+p {
+	margin-bottom: 7px;
+}
+
+a {
+	color: #6b9f28;
+	text-decoration: none;
+}
+a:hover {
+	color: #37590b;
+}
+
+a.btn, .zemSubmit {
+	background: #92272c;
+	color: #fff;
+	padding: 10px 15px;
+	display: block;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font: bold 15px/21px Helvetica, Arial, sans;
+	float: left;
+	margin-right: 20px;
+	border: none;
+}
+a.btn:hover, .zemSubmit:hover  {
+	background: #671216;
+	cursor:pointer;
+}
+
+h2{
+	font: bold 17px/21px Helvetica, Arial, sans;
+	color: #eee;
+	padding-left: 49px;
+	margin-bottom: 10px;
+}
+h3 {
+	font: bold 11px/11px Helvetica, Arial, sans;
+	margin-bottom: 8px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #777;
+}
+
+h4 {
+	font: bold 24px/24px Helvetica, Arial, sans;
+	color: #eee;
+	margin-bottom: 10px;
+}
+
+
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 984px;
+}
+
+.col { float: left; margin-right: 24px}
+.last { margin-right: 0 }
+
+.col3 { width: 228px; }
+.col4 { width: 312px; }
+.col6 { width: 480px; }
+.col8 { width: 648px; }
+
+#header {
+	height: 100px;
+}
+#intro .wrapper {
+	height: 464px;
+}
+
+	#intro #logo {
+		background: url(/i/sprite.png) no-repeat -4px -88px;
+		width: 158px;
+		height: 100px;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+	#intro h1 {
+		font: bold 52px/48px Helvetica, Arial, sans;
+		color: #333;
+		letter-spacing: -1px;
+		top: 145px;
+		left: 0;
+		position: absolute;
+	}
+	#intro h5 {
+		font: bold 20px Helvetica, Arial, sans;
+		color: #777;
+		letter-spacing: -1px;
+		top: 309px;
+		left: 0;
+		position: absolute;
+	}
+	#intro .buttons {
+		top: 370px;
+		left: 0;
+		position: absolute;
+	}
+	#intro #hero {
+		background: url(/i/waiter.png) no-repeat;
+		width: 485px;
+		height: 433px;
+		bottom: 0;
+		left: 500px;
+		position: absolute;
+	}
+
+#features {
+	background: #2a2b2d;
+}
+	#features .wrapper {
+		padding: 35px 0 10px 0;
+	}
+	#features li {
+		padding-bottom: 30px;
+		position: relative;
+	}
+	#features li .icon {
+		position: absolute;
+		top: 0; left: -2px;
+		height: 42px; width: 42px;
+		background: url(/i/sprite.png) no-repeat;
+	}
+
+	#features #feature-update .icon { background-position: -5px -196px }
+	#features #feature-design .icon { background-position: -47px -196px }
+	#features #feature-charity .icon { background-position: -90px -196px }
+	#features #feature-twitter .icon { background-position: -131px -196px }
+	#features #feature-price .icon { background-position: -5px -239px }
+	#features #feature-guide .icon { background-position: -47px -239px }
+	#features #feature-search .icon { background-position: -89px -239px }
+	#features #feature-support .icon { background-position: -131px -239px }
+
+#case {
+	background: #333;
+}
+	#case .wrapper {
+		padding: 40px 0;
+	}
+	#caseImg {
+		background: url(/i/case.jpg) no-repeat;
+		height: 220px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+
+#footer {
+	color: #777;
+}
+#footer .wrapper {
+	padding-top: 96px;
+}
+#footer #logoFooter {
+	background: url(/i/sprite.png) no-repeat -4px -5px;
+	width: 99px;
+	height: 56px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+#footer span { color: #333; }
+#footer h3 { color: #555; margin: 4px 0 3px; }
+#footer ul li {
+	border-top: 1px solid #ccc;
+	padding: 3px 0
+}
+#footer ul li.top {
+	padding-top: 0;
+	border-top: 0;
+}
+
+
+#internal #logo  {
+	background: url(/i/sprite.png) no-repeat -4px -5px;
+	width: 99px;
+	padding-top: 56px;
+	top: 0;
+	left: 40px;
+	position: absolute;
+}
+#internal  {
+	margin-top: 70px;
+}
+#internal .wrapper {
+	background: #333;
+	width: 700px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+#internal .copy {
+	padding: 110px 40px 63px 40px;
+}
+
+#internal h1 {
+	font: bold 52px/48px Helvetica, Arial, sans;
+	letter-spacing: -1px;
+	color: #fff;
+	position: static;
+	margin-bottom: 20px;
+}
+#internal p {
+	font: bold 17px/21px Helvetica, Arial, sans;
+	margin-bottom: 12px;
+	color: #777;
+}
+#internal p.note {
+	font: 11px/17px "Lucida Grande", Verdana;
+	color: #ccc;
+}
+#internal p span {
+	color: #fff;
+}
+#internal .buttons {
+	position: static;
+	margin: 30px 0;
+}
+#internal.quote .buttons {
+	margin: 50px 0 0 0;
+}
+#internal #face {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+	width: 150px;
+	height: 81px;
+	background: url(/i/waiterHead.png) no-repeat;
+}
+
+
+form {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+form li {
+	margin-bottom: 25px;
+}
+form li.section {
+	border-top: 1px dotted #555;
+	padding-top: 30px;
+	margin-top: 30px;
+}
+form label, form h3 {
+	font: bold 17px/21px Helvetica, Arial, sans;
+	color: #fff;
+	margin-bottom: 3px;
+	text-transform: none;
+	letter-spacing: 0;
+	color: #ccc;
+}
+form input.zemText {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: none;
+	width: 220px;
+	padding: 6px 6px 5px 6px;
+	font: bold 14px/21px Helvetica, Arial, sans;
+	margin-bottom: 5px;
+	clear: both;
+	display: block;
+	margin-top: 3px;
+}
+form .small input {
+	width: 120px;
+}
+form .large input {
+	width: 332px;
+}
+	form .clearfix input.input-tiny,
+	form .clearfix input.input-small {
+		float: left;
+		margin-right: 5px;
+	}
+form .group-radio label {
+	display: inline !important;
+	padding-right: 10px;
+	font-size: 14px;
+	color: #fff;
+}
+form textarea {
+	font: bold 14px/17px Helvetica, Arial, sans;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: none;
+	width: 400px;
+	height: 100px;
+	padding: 5px;
+	margin-bottom: 5px;
+	margin-top: 3px;
+}
+
+label.zemRequired, label.zemRequirederrorElement {
+ 	background: url(/i/required.png) right 3px no-repeat;
+ 	padding-right: 54px;
+}
+.zemError {
+ 	background: #72bcf5;
+ 	padding: 15px 15px 10px 15px;
+	margin-bottom: 30px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #000;
+	font: normal 14px/17px Helvetica, Arial, sans;
+}
+.zemError li {
+	margin-bottom: 5px;
+}

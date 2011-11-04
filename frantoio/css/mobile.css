@@ -1,0 +1,211 @@
+body {
+	color: #333;
+	background: #eee;
+	font: 13px/19px Hevetica Neue, Helvetica, Arial, sans;
+	text-shadow: 0 1px 1px #fff;
+	padding: 10px 15px;
+}
+
+a {
+color: #720000
+}
+p {
+	margin-bottom: 7px;
+}
+
+	#header #logo  {
+		background: url(/i/logo.png) no-repeat;
+		width: 93px;
+		padding-top: 57px;
+		margin-bottom: 15px;
+	}
+
+
+	#header #nav {
+		margin: 0 -15px 0;
+	}
+	#header #nav li {
+		border-top: 1px solid #ccc;
+	}
+	#header #nav li a {
+		font-size: 17px;
+		padding: 10px 15px;
+		display: block;
+		background: #fff;
+		font-weight: bold;
+	}
+	#header #nav li span {
+		display: none;
+	}
+
+	
+	#default li#nav-home a,
+	#menus li#nav-menus a,
+	#about li#nav-about a,
+	#private li#nav-private a,
+	#olive li#nav-olive a {
+		color: #fff;
+		background: #720000;
+		text-shadow: none;;
+	}
+
+#page-header #main-img {
+	height: 220px;
+	margin: 0 -15px;
+}
+	#default #page-header #main-img {
+		background: url(/images/3.jpg) center center;
+	}
+	#menus #main-img {
+		background: url(/images/5.jpg)center center;
+	}
+	#about #main-img {
+		background: url(/images/7.jpg)center center;
+	}
+	#private #main-img {
+		background: url(/images/6.jpg)center center;
+	}
+	#olive #main-img {
+		background: url(/images/8.jpg)center center;
+	}
+
+
+#promo {
+	display:none
+}
+
+#default #promo, #olive-promo {
+	margin: 0 -15px 0;
+	background: #720000;
+	color: #fff;
+	text-shadow: none;
+	padding: 7px 15px;
+}
+#olive-promo {
+	margin: 15px -15px;
+}
+#olive-promo p {
+	margin-bottom: 0;
+}
+
+#promo a, #olive-promo a {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+#details-wrap {
+	display: none;
+}
+#default #details-wrap {
+	margin-top: 20px;
+	display: block;
+}
+#details-wrap, 
+#reserve-wrapper,
+#callouts .col-2  {
+	margin-bottom: 15px;
+}
+
+h1 {
+	font-size: 17px;
+	line-height: 21px;
+	margin-top: 20px;
+	margin-bottom: 7px;
+}
+h2 {
+	font-size: 15px;
+}
+
+#callouts .col-2 {
+	border-top: 1px dotted #ccc;
+	margin-bottom: 12px;
+	padding-top: 12px;
+}
+#callouts p{
+	margin-bottom: 0;
+}
+
+#newsletter, #facebook {
+display: block;
+}
+#alt-menu, #cal1Shim {
+	display: none;
+}
+
+
+.tabs-nav {
+		margin: 15px -15px;
+		border-bottom: 1px solid #ccc;
+}
+.tabs-nav li {
+		border-top: 1px solid #ccc;
+}
+	.tabs-nav li a {
+		padding: 4px 15px;
+		display: block;
+	}
+.tabs-nav li.active a {
+		background: #720000;
+		color: #fff;
+		text-shadow: none;
+}
+
+
+.tab-content h2 {
+	margin-top: 15px;
+	margin-bottom: 7px;
+}
+.tab-content em {
+	float: right;
+}
+
+#default #reserve-wrapper {
+	border-top: 1px dotted #ccc;
+	padding-top: 15px;
+}
+#reserve-wrapper {
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 18px;
+}
+
+#menu-tabs table tbody td strong {
+	font-size: 11px;
+	white-space: nowrap;
+	padding-right: 3px;
+}
+#menu-tabs table tbody td:last-child strong {
+	padding-right: 0;
+}
+
+
+#OT_partySizeLbl, #OT_dateLbl, #OT_timeLbl {
+	padding-top: 10px;
+	font-weight: bold;
+}
+#OT_submitWrap {
+	margin-top: 15px;
+}
+
+#contact {
+	margin: 15px 0;
+}
+#contact h3 {
+	margin-bottom: 15px;
+}
+
+#contact form legend {
+	display: none;
+}
+#contact form label {
+	font-weight: bold;
+}
+#contact form input.zemText, 
+#contact form input.zemTextarea {
+	padding: 7px;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+#contact form input.zemSubmit {
+	margin-top: 15px;
+}

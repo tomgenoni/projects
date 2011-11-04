@@ -1,0 +1,6 @@
+body { height: 100%; }
+.clearfix, .hasLayout, .pod { zoom: 1 }
+
+.icons16, .icons16-left, .icons16-right { 
+	margin-top: 0;
+}

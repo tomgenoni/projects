@@ -1,0 +1,21 @@
+	<div id="reserve-wrapper">
+		<div id="reserve">
+				<span>Make a Reservation with OpenTable</span>
+		    <script type="text/JavaScript" src="http://www.opentable.com/ism/?rid=1573"></script>
+				<noscript id="OT_noscript"><a href="http://www.opentable.com/single.aspx?rid=1573&restref=1573&rtype=ism">Reserve Now on OpenTable.com</a></noscript>
+		</div>
+		<div class="opacity-bkg"></div>
+	</div>
+	<div id="footer">
+		<a href="#" id="newsletter"><span class="icon"></span>Sign up for our email newsletter</a>
+		<a href="http://www.facebook.com/pages/Mill-Valley-CA/Frantoio-Ristorante-Olive-Oil-Co/90170278747" id="facebook"><span class="icon"></span>Follow us on Facebook</a>
+		<span id="alt-menu"><a href="/">Home</a> &middot; <a href="/menus">Menus</a> &middot; <a href="/about">About</a> &middot; <a href="/private">Private Parties</a> &middot; <a href="/olive">Olive Oil</a></span><br />
+		Copyright &copy; <txp:php> print date("Y"); </txp:php> / All Rights Reserved	
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+
+</body>
+</html>

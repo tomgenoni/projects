@@ -1,0 +1,6 @@
+<txp:variable name="category_name" value='<txp:category />' />
+<ul>
+	<li class="category"><txp:category /></li>
+	<txp:article_custom form="article_listing" category='<txp:variable name="category_name" />' />
+</ul>
+

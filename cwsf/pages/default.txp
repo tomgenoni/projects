@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title><txp:page_title /></title>
+
+	<link rel="home" href="<txp:site_url />" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
+	<link href=' http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT' rel='stylesheet' type='text/css' />
+	<!--[if IE 7]><link href="/css/ie7.css" type="text/css" rel="stylesheet"/><![endif]-->
+	
+	<txp:feed_link flavor="atom" format="link" label="Atom" />
+	<txp:feed_link flavor="rss" format="link" label="RSS" />
+
+
+	<txp:rsd />
+</head>
+<body id="<txp:if_section name="">front<txp:else /><txp:section /></txp:if_section>">
+
+<div id="container">
+	
+<h3>People of the Mission, the Bay Area, and the World:</h3>	
+<p>We think people want inventive and satisfying food.</p>
+<p>We think people want businesses to give back to their communities.</p>
+<p>We think people want a restaurant where they can feel good <strong>and</strong> do good.</p>
+
+<p>To that end, we accounce</p>
+<h1>Commonwealth</h1>
+<p>a restaurant following a benevolent business model.</p>
+<p>We expect to open this summer. We look forward to meeting you then.</p>
+
+<img src="/i/front-img.png" width="807" height="109" alt="Front Img" />
+
+<p><a href="http://eepurl.com/kL8y">Click here</a> to sign up for our mailing list.</p>
+
+</div>
+
+
+</body>
+</html>

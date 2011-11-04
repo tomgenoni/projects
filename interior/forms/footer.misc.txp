@@ -1,0 +1,16 @@
+		</div>
+		<div id="sidebar">
+			<ul id="nav">
+				<li class="section-1">
+					<h2><a href="/portfolio/catch-restaurant">Portfolio</a></h2>
+					<txp:category_list form="portfolio_listing" break=""  />
+				</li>
+				<li class="section-2"><h2><a href="/profile/">Profile</a></h2></li>
+				<li class="section-3"><h2><a href="/contact/">Contact</a></h2></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="footer"><a href="/">april powers interior design</a><br /><span class="copy">copyright &copy; <txp:php> print date("Y"); </txp:php> / all rights reserved</span></div>
+</body>
+</html>

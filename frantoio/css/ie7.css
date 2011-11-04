@@ -1,0 +1,9 @@
+body { height: 100%; }
+.clearfix, .hasLayout { zoom: 1 }
+
+#content .col-4 .tab-content p {
+		text-align: left; text-justify: auto;
+}
+	#header #nav li {
+		padding-top: 3px;
+	}

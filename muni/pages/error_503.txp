@@ -1,0 +1,9 @@
+<txp:output_form form="header" />
+	
+		<div id="maintenance">
+			Making some fixes.<br />
+			We'll be back up momentarily.
+			<img src="i/logo.png" width="61" height="24" alt="Logo" />
+		</div>
+
+<txp:output_form form="footer" />

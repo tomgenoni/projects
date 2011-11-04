@@ -1,0 +1,112 @@
+/* Global Resets */
+
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+h1, h2, h3, h4, h5, h6
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	text-align: left;
+	vertical-align: baseline;
+}
+a img, :link img, :visited img {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol, ul {
+	list-style: none;
+}
+strong {
+    font-weight: bold;
+}
+q:before, q:after,
+blockquote:before, blockquote:after {
+	content: "";
+}
+
+input { padding: 0; margin: 0 }
+
+
+.fltL { float: left !important; }
+.fltR { float: right !important; }
+.alignL { text-align: left !important; }
+.alignR { text-align: right !important; }
+.alignC { text-align: center !important; }
+.noMarg { margin: 0 !important; }
+.noPad { padding: 0 !important; }
+
+.font9 { font-size: 9px !important }
+.font10 { font-size: 10px !important }
+.font11 { font-size: 11px !important }
+.font12 { font-size: 12px !important }
+.font13 { font-size: 13px !important }
+.font14 { font-size: 14px !important }
+.normal { font-weight: normal !important }
+.italic { font-style: italic !important }
+
+.displayBlock { display: block !important; }
+.displayInline { display: inline !important; }
+.displayNone { display: none !important; }
+.last { margin: 0 !important; }
+
+.irspacer { padding-right: 10px; }
+
+.fiftyL { float: left; width: 48% }
+.fiftyR { float: right; width: 48% }
+
+.itemCentered { margin-right: auto !important; margin-left: auto !important}
+
+.posAbsolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* overrides */
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold }
+
+.plainList { padding: 0 0 0 30px; margin: 0 0 7px 0}
+.plainList li { list-style-position: outside; }
+ol.plainList li { list-style-type: decimal;}
+ul.plainList li {list-style-type: disc;}
+
+
+/* Universal Items */
+
+.clearfix:after {
+    clear: both; 
+    content: "."; 
+    display: block; 
+    height: 0; 
+    visibility: hidden;
+    font-size:0;	
+}
+
+img { display: block; }
+
+a img { border: 0 }
+
+a { cursor: pointer; cursor: hand; outline: none; }
+
+.clearLink {
+	display: block !important; 
+	overflow: hidden;
+	height: 0 !important;
+	cursor: pointer;
+}
+

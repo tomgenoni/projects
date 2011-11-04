@@ -1,0 +1,12 @@
+<txp:output_form form="header" />
+	<txp:article_custom form="contact" id="15" /> 
+	
+	
+	<txp:zem_contact to="tom@atomeye.com">
+<txp:zem_contact_text label="Name" /><br />
+<txp:zem_contact_email /><br />
+<txp:zem_contact_textarea label="Message" /><br />
+<txp:zem_contact_submit label="send message" />
+</txp:zem_contact>
+	
+<txp:output_form form="footer" />

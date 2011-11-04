@@ -1,0 +1,7 @@
+<txp:output_form form="header" />
+	<txp:if_section name="">
+		<txp:article_custom form="home" id="13" /> 
+	<txp:else />
+		<txp:article />
+	</txp:if_section>
+<txp:output_form form="footer" />

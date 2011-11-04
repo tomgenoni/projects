@@ -1,0 +1,13 @@
+body { height: 100%; }
+.clearfix, .hasLayout { zoom: 1 }
+
+h3 {
+	font-family: Verdana;
+	font-size: 10px;
+}
+#footer .col6 {
+	padding-top:3px;
+}
+form input.zemText {
+	padding: 3px 6px 10px 6px;
+}

@@ -1,0 +1,324 @@
+/* base
+----------------------------------------------- */
+
+body {
+	margin: 20px 0 0 0;
+	padding: 0;
+	font-family: Georgia, Palatino, Times, serif;
+	color: #333;
+	background: #fff;
+}
+
+blockquote, h3, p, li {
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+blockquote {
+	margin-right: 0;
+	margin-left: 20px;
+}
+
+h1, h2, h3 {
+	margin: 0 0 15px 0;
+	font-weight: normal;
+}
+
+h1, h2, h4 {
+	font-family: Georgia, Times, serif;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 2em;
+	font-family: 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+	letter-spacing: -1px;
+	
+}
+h4 {
+	font-family: 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-bottom: 10px;
+	letter-spacing: 1px;
+	
+}
+
+hr {
+	margin: 2em auto;
+	width: 370px;
+	height: 1px;
+	color: #7a7e7d;
+	background-color: #7a7e7d;
+	border: none;
+}
+
+small, .small {
+	font-size: 0.9em;
+}
+
+p {
+	margin-bottom: 13px;
+}
+
+/* links
+----------------------------------------------- */
+
+a {
+	text-decoration: none;
+	color: #2783a1;
+}
+a:hover{
+	color: #46cbf7;
+}
+
+a img {
+	border: none;
+}
+
+h1 a, h2 a, h3 a {
+	border: none;
+}
+
+h3, .hfeed .entry-title {
+	font: 2em 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+	letter-spacing: -1px;
+}
+
+#site-name a {
+	border: none;
+	color: #000;
+}
+
+#sidebar-2 a, #sidebar-1 a {
+	color: #7f9908;
+	border: none;
+}
+#sidebar-2 a:hover, #sidebar-1 a:hover {
+	color: #374300;
+}
+
+/* layout
+----------------------------------------------- */
+
+#accessibility {
+	position: absolute;
+	top: -10000px;
+}
+
+#container {
+	margin: 0 auto;
+	width: 960px;
+}
+
+#head {
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+#head h1 {
+	text-transform: uppercase;
+	font-family: 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+	margin: 0;
+}
+
+#site-name {
+	font-size: 4em;
+}
+
+#site-slogan {
+	font: italic 1em Georgia, Times, serif;
+	margin: 0;
+}
+
+#sidebar-1, #sidebar-2 {
+	width: 150px;
+}
+
+#sidebar-1 ul {
+	margin-bottom: 20px;
+}
+#sidebar-1 ul li, #sidebar-2 ul li {
+	font-size: .9em;
+	line-height: 1.3em;
+	margin-bottom: 4px;
+	color: #999;
+}
+
+
+.section_list {
+	margin: 0 0 10px 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.section_list ul {
+	list-style-type: none;
+}
+
+.section_list li {
+	margin: 0 10px 2px 0;
+	padding: 0;
+}
+
+#content {
+	float: left;
+	margin-right: 20px;
+	width: 600px;
+	min-height: 400px;
+}
+
+#sidebar-1 {
+	margin-right: 20px;
+	float: left;
+	width: 160px;
+}
+
+#sidebar-2 {
+	float: left;
+	width: 160px;
+}
+
+
+#foot {
+	margin-top: 20px;
+	clear: both;
+	padding: 20px 0;
+	border-top: 1px dotted #ddd;
+	font-size: .9em;
+	color: #666;
+}
+#foot a {
+	color: #7F9908;
+}
+#foot a:hover {
+	color: #374300;
+}
+
+
+/* overrides
+----------------------------------------------- */
+
+#sidebar-2 p, #sidebar-1 p {
+	font-size: 0.8em;
+	line-height: 1.5em;
+}
+
+.caps {
+	font-size: 0.9em;
+	letter-spacing: 0.1em;
+}
+
+div.divider {
+	margin: 2em 0;
+	border-top: 1px dotted #ddd;
+}
+
+/* articles
+----------------------------------------------- */
+
+.directory .entry-title {
+	font-size: 1.2em;
+	letter-spacing: 0px;
+	
+}
+
+.author {
+	font-style: normal;
+	font-size: 0.8em;
+}
+
+.published {
+	font-size: 0.8em;
+}
+
+.credit {
+	font-size: 0.8em;
+	color: #666;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #ddd;
+}
+.credit:last-of-type {
+	border-bottom: none;
+}
+
+.credit span, .caption {
+	font-style: italic;
+}
+.caption {
+	margin-bottom: 15px;
+	margin-top: -25px;
+}
+
+/* comments
+----------------------------------------------- */
+
+.comments_error {
+	color: #000;
+	background-color: #fff4f4;
+}
+
+ul.comments_error {
+	padding : 0.3em;
+	list-style-type: circle;
+	list-style-position: inside;
+	border: 2px solid #fdd;
+}
+
+div#cpreview {
+	color: #000;
+	background-color: #f1f1f1;
+	border: 2px solid #ddd;
+}
+
+form#txpCommentInputForm td {
+	vertical-align: top;
+}
+
+#comments-help {
+	margin: 2px 0 15px 0;
+	font-size: 0.7em;
+}
+
+/* error page
+----------------------------------------------- */
+
+.error-status {
+	font: 1.3em Georgia, Times, serif;
+}
+
+
+
+/* front page */
+#front #container {
+	margin-top: 40px;
+	text-align: center;
+	font-family: 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+	font-size: 20px;
+	color: #000;
+}
+#front #container p {
+	margin-bottom: 7px;
+}
+#front h1  {
+	font-size: 4em;
+	margin: 10px 0;
+	text-transform: uppercase;
+	font-family: 'OFL Sorts Mill Goudy TT', Georgia, Times, serif;
+}
+#front img  {
+	margin: 40px auto;
+
+}
+
+
+#front #container h1,
+#front #container h3,
+#front #container p {
+	text-align: center;
+}

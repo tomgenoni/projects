@@ -1,0 +1,5 @@
+<div id="main-item-description">
+	<h1 class="spacer"><txp:title /></h1>
+	<txp:body />
+</div>
+<txp:article_image />
