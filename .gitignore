@@ -1,2 +1,3 @@
 .DS_Store
-.sass_cache
+spell/.sass_cache
+spell/compass_app_log.txt

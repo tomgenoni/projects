@@ -1,10 +1,11 @@
-@import "compass/layout/grid-background";
 @import "compass/css3";
 @import "compass/reset";
 @import "compass/utilities";
 
 html, body {
 	height: 100%;
+	font: 13px/17px Georgia, Times, serif;
+			background: #f5f5f5;
 }
 
 #container {
@@ -18,19 +19,48 @@ html, body {
 		list-style: none;
 		width: 9999px;
 		height: 100%;
+		@include display-box;
 
 		li.panel {
-			height: 100%;
-			display: block;
-			float: left;
+			height: 90%;
 			overflow: auto;
-			background: #eee;
-
+			@include box-sizing(border-box);
+			width: 100%; // only on load, js resizes to fit;
+			  display: -webkit-box;
+			  -webkit-box-orient: horizontal;
+			  -webkit-box-pack: center;
+			  -webkit-box-align: center;
 			audio {
 				display: none;
 			}
+
+			.word-wrap {
+				background: #fff;
+				width: 50%;
+				height: 50%;
+				margin: 0 auto;
+				padding: 20px;
+				@include border-radius(10px);
+				border: 1px solid #ddd;
+				@include box-shadow(0 0 6px #ddd);
+				text-align: center;
+			}
 		}
 	}
+}
+
+.btn {
+	background: green;
+	padding: 10px 20px;
+	@include border-radius(10px);
+	@include linear-gradient(#86cd39,#a8e765);
+	@include box-shadow(0 1px 3px #aaa);
+	@include text-shadow(0 -1px 0 #86cd39);
+	font: bold 16px "Helvetica Neue";
+	border: 1px solid #86cd39;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
 }
 
 #footer-controls {
@@ -39,16 +69,33 @@ html, body {
 	left: 0;
 	right: 0;
 	height: 40px;
-	background: green;
+	background: #fff;
+	border-top: 1px solid #ddd;
+	@include box-shadow(0 -3px 3px #eee);
+
+	ul {
+		text-align: center;
+		margin-top: 10px;
+
+		li {
+			height: 16px;
+			width: 16px;
+			margin: 0 2px;
+			display: inline-block;
+			background: #ddd;
+			@include border-radius(100%);
+		}
+	}
 }
 
 .clicker {
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
-	background: red;
+	background: #fff;
 	position: absolute;
 	cursor: pointer;
+	@include box-shadow(0 0 6px #ccc);
 }
 
 .clicker-left {

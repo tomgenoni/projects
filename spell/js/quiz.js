@@ -14,6 +14,7 @@ $(document).ready(function() {
     	 }
 
         panel.find("audio").get(0).play();
+        return false;
 
     })
 
