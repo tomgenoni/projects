@@ -39,28 +39,94 @@ html, body {
 				width: 50%;
 				height: 50%;
 				margin: 0 auto;
-				padding: 20px;
+				padding: 5% 2%;
+				@include box-sizing(border-box);
 				@include border-radius(10px);
 				border: 1px solid #ddd;
 				@include box-shadow(0 0 6px #ddd);
 				text-align: center;
+
+				h2 {
+					margin: 40px 0 5px;
+					color: #999;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+				}
+
+				ol {
+					color: #333;
+				}
+
+				input {
+					border: 1px solid #ddd;
+					padding: 10px;
+					font: 24px "Helvetica Neue";
+					margin: 50px auto 20px;
+					width: 80%;
+					text-align: center;
+					display: block;
+				}
+
+				.answer {
+					background: #fff;
+					padding: 10px 20px;
+					@include border-radius(10px);
+					font: bold 16px "Helvetica Neue";
+					color: #fff;
+					text-decoration: none;
+					display: inline-block;
+					display: none;
+
+					&.correct {
+						color: #86cd39;
+					}
+					&.incorrect {
+						color: red;
+					}
+				}
 			}
 		}
 	}
 }
 
-.btn {
-	background: green;
+.playBtn {
+	background: #86cd39;
 	padding: 10px 20px;
 	@include border-radius(10px);
-	@include linear-gradient(#86cd39,#a8e765);
-	@include box-shadow(0 1px 3px #aaa);
-	@include text-shadow(0 -1px 0 #86cd39);
-	font: bold 16px "Helvetica Neue";
+	font: bold 24px "Helvetica Neue";
 	border: 1px solid #86cd39;
 	color: #fff;
 	text-decoration: none;
 	display: inline-block;
+
+}
+.checkBtn {
+	background: #407ccd;
+	padding: 10px 20px;
+	@include border-radius(10px);
+	font: bold 16px "Helvetica Neue";
+	border: 1px solid #407ccd;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	@include box-shadow(0 3px 3px #eee);
+
+	h1 {
+		text-align: center;
+		font: bold 16px "Helvetica Neue";
+		margin-top: 8px;
+	}
 }
 
 #footer-controls {
