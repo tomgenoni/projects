@@ -19,7 +19,6 @@ $(document).ready(function() {
 
     $('input').bind('focus',function() {
         $(this).next(".checkBtn").css("visibility","visible");
-
     });
 
 

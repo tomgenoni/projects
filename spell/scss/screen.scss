@@ -103,13 +103,14 @@ html, body {
 
 				input {
 					border: 1px solid #ddd;
-					padding: 10px;
+					padding: 5px 10px;
 					font: 24px "Helvetica Neue";
-					margin: 20px auto 20px;
+					margin: 20px auto;
 					width: 80%;
 					text-align: center;
 					display: block;
 					@include border-radius(5px);
+					background: #fff;
 				}
 
 				.answer {
@@ -135,17 +136,17 @@ html, body {
 	display: block;
 	margin: 0 auto;
 	@include box-shadow(0 1px 0 #fff);
-	background: #529807 url(../i/sound.png) no-repeat center center;
+	background: #333 url(../i/sound.png) no-repeat center center;
 	-webkit-background-size: 70% 70%;
 }
 .checkBtn, .nextBtn {
 	padding: 5px 15px 7px;
 	font: bold 13px "Helvetica Neue";
 	@include border-radius(5px);
-	background: #529807;
-	color: #e5efda;
-	@include text-shadow(0 -1px 0 #444);
-	border: 1px solid #529807;
+	background: #333;
+	color: #eee;
+	@include text-shadow(0 -1px 0 #000);
+	border: 1px solid #222;
 	text-decoration: none;
 }
 
@@ -189,10 +190,10 @@ html, body {
 
 			&:first-child {
 				border-left: none;
+				@include box-flex(1);
 			}
 			&:last-child {
 				border-right: none;
-				@include box-flex(1);
 			}
 		
 			a.btn {
