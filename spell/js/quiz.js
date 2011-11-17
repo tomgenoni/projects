@@ -16,8 +16,16 @@ $(document).ready(function() {
         return false;
     })
 
+
+    $('input').bind('focus',function() {
+        $(this).next(".checkBtn").css("visibility","visible");
+
+    });
+
+
+
 	$(".checkBtn").live("click", function(event){
-       
+
     	var panel = $(this).closest(".panel");
     	var word = panel.attr("data-word");
     	var attempt = panel.find("input").val();

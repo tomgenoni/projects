@@ -5,7 +5,7 @@
 html, body {
 	height: 100%;
 	font: 13px/17px Georgia, Times, serif;
-	background: #222;
+	background: #f5f5f5;
 }
 
 .correct {
@@ -22,9 +22,8 @@ html, body {
 	right: 0;
 	left: 0;
 	bottom: 42px;
-	@include linear-gradient((#eee, #ddd), top);
 	display: none;
-	@include linear-gradient((#fff, #f1f1f1), top);
+	background: #f5f5f5;
 }
 
 .answer-screen {
@@ -75,6 +74,10 @@ html, body {
 			@include box-sizing(border-box);
 			width: 100%; // only on load, js resizes to fit;
 			position: relative;
+			display: -webkit-box;
+		  -webkit-box-orient: horizontal;
+		  -webkit-box-pack: center;
+		  -webkit-box-align: center;
 
 			audio {
 				display: none;
@@ -83,7 +86,7 @@ html, body {
 			.word-wrap {
 				width: 90%;
 				margin: 0 auto;
-				padding: 7% 2% 0 2%;
+				padding: 0 2% 15% 2%;
 				@include box-sizing(border-box);
 				text-align: center;
 
@@ -95,11 +98,11 @@ html, body {
 				}
 
 				ol {
-					color: #ddd;
+					color: #444;
 				}
 
 				input {
-					border: 1px solid #000;
+					border: 1px solid #ddd;
 					padding: 10px;
 					font: 24px "Helvetica Neue";
 					margin: 20px auto 20px;
@@ -125,26 +128,29 @@ html, body {
 	}
 }
 
-.playBtn, .checkBtn, .nextBtn {
-	background: #fff;
-	padding: 9px 20px 11px;
-	@include border-radius(10px);
-	font: bold 24px "Helvetica Neue";
-	border: 1px solid #ccc;
-	color: #999;
-	text-decoration: none;
-	display: inline-block;
-	@include text-shadow(0 -1px 0 #fff);
-
+.playBtn {
+	height: 80px;
+	width: 80px;
+	@include border-radius(100%);
+	display: block;
+	margin: 0 auto;
+	@include box-shadow(0 1px 0 #fff);
+	background: #529807 url(../i/sound.png) no-repeat center center;
+	-webkit-background-size: 70% 70%;
 }
 .checkBtn, .nextBtn {
 	padding: 5px 15px 7px;
 	font: bold 13px "Helvetica Neue";
 	@include border-radius(5px);
 	background: #529807;
-	color: #fff;
-	@include text-shadow(0 -1px 0 #000);
+	color: #e5efda;
+	@include text-shadow(0 -1px 0 #444);
 	border: 1px solid #529807;
+	text-decoration: none;
+}
+
+.checkBtn {
+	visibility: hidden;
 }
 
 #header {
@@ -166,8 +172,8 @@ html, body {
 	right: 0;
 	height: 40px;
 	background: #fff;
-	border-top: 1px solid #000;
-	background: #222;
+	border-top: 1px solid #ddd;
+	background: #f5f5f5;
 
 	ul {
 		height: 40px;
@@ -175,11 +181,11 @@ html, body {
 
 		li {
 			padding: 10px;
-			border-right: 1px solid #000;
-			border-left: 1px solid #333;
+			border-right: 1px solid #ddd;
+			border-left: 1px solid #fff;
 			font: bold 13px "Helvetica Neue";
-			color: #ccc;
-			@include text-shadow(0 -1px 0 #000);
+			color: #999;
+			@include text-shadow(0 1px 0 #fff);
 
 			&:first-child {
 				border-left: none;
@@ -192,20 +198,20 @@ html, body {
 			a.btn {
 				float: right;
 				font: bold 13px "Helvetica Neue";
-				color: #ccc;
-				@include text-shadow(0 1px 0 #000);
+				color: #999;
+				@include text-shadow(0 1px 0 #fff);
 				text-decoration: none;
-				border: 1px solid #000;
+				border: 1px solid #ccc;
 				@include border-radius(4px);
 				position: relative;
 				top: -4px;
-				@include box-shadow(0 1px 0 #333);
+				@include box-shadow(0 1px 0 #fff);
 				display: inline-block;
 
 				span {
 					padding: 4px 10px 5px;
 					display: block;
-					@include box-shadow(0 1px 0 #333 inset);
+					@include box-shadow(0 1px 0 #fff inset);
 					@include border-radius(4px);
 				}
 			}
