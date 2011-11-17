@@ -17,16 +17,21 @@ $(document).ready(function() {
     })
 
 	$(".checkBtn").live("click", function(event){
+       
     	var panel = $(this).closest(".panel");
     	var word = panel.attr("data-word");
     	var attempt = panel.find("input").val();
-    	$(this).hide();
-    	if (attempt == word ) {
-    		panel.find(".correct").show();
+
+        panel.find(".answer-bkg").show();
+    	
+        if (attempt == word ) {
+    		panel.find(".answer-correct").show();
     	} else {
-    		panel.find(".incorrect").show();
+    		panel.find(".answer-incorrect").show();
     	}
         return false;
-    })
+    });
+
+
 
 })

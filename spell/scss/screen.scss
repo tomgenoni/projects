@@ -5,7 +5,55 @@
 html, body {
 	height: 100%;
 	font: 13px/17px Georgia, Times, serif;
-			background: #f5f5f5;
+	background: #222;
+}
+
+.correct {
+	color: #529807 !important;
+}
+.incorrect {
+	color: #96090e !important;
+}
+
+.answer-bkg {
+	position: absolute;
+	z-index: 1;
+	top: 0; 
+	right: 0;
+	left: 0;
+	bottom: 42px;
+	@include linear-gradient((#eee, #ddd), top);
+	display: none;
+	@include linear-gradient((#fff, #f1f1f1), top);
+}
+
+.answer-screen {
+	position: absolute;
+	z-index: 2;
+	top: 0; 
+	right: 0;
+	left: 0;
+	bottom: 41px;
+	text-align: center;
+	padding-top: 20%;
+	display: none;
+
+	.text  {
+		@include text-shadow(0 1px 0 #fff);
+		color: #333;
+		text-align: center;
+		font: bold 50px "Helvetica Neue";
+		letter-spacing: -1px;
+		span {
+			font-size: 70px;
+			display: inline-block;
+			position: relative;
+			top: 2px;
+		}
+	}
+	.nextBtn {
+		margin-top: 20%;
+	}
 }
 
 #container {
@@ -22,49 +70,43 @@ html, body {
 		@include display-box;
 
 		li.panel {
-			height: 90%;
+			height: 100%;
 			overflow: auto;
 			@include box-sizing(border-box);
 			width: 100%; // only on load, js resizes to fit;
-			  display: -webkit-box;
-			  -webkit-box-orient: horizontal;
-			  -webkit-box-pack: center;
-			  -webkit-box-align: center;
+			position: relative;
+
 			audio {
 				display: none;
 			}
 
 			.word-wrap {
-				background: #fff;
-				width: 50%;
-				height: 50%;
+				width: 90%;
 				margin: 0 auto;
-				padding: 5% 2%;
+				padding: 7% 2% 0 2%;
 				@include box-sizing(border-box);
-				@include border-radius(10px);
-				border: 1px solid #ddd;
-				@include box-shadow(0 0 6px #ddd);
 				text-align: center;
 
 				h2 {
-					margin: 40px 0 5px;
+					margin: 20px 0 5px;
 					color: #999;
 					letter-spacing: 1px;
 					text-transform: uppercase;
 				}
 
 				ol {
-					color: #333;
+					color: #ddd;
 				}
 
 				input {
-					border: 1px solid #ddd;
+					border: 1px solid #000;
 					padding: 10px;
 					font: 24px "Helvetica Neue";
-					margin: 50px auto 20px;
+					margin: 20px auto 20px;
 					width: 80%;
 					text-align: center;
 					display: block;
+					@include border-radius(5px);
 				}
 
 				.answer {
@@ -77,39 +119,32 @@ html, body {
 					display: inline-block;
 					display: none;
 
-					&.correct {
-						color: #86cd39;
-					}
-					&.incorrect {
-						color: red;
-					}
 				}
 			}
 		}
 	}
 }
 
-.playBtn {
-	background: #86cd39;
-	padding: 10px 20px;
+.playBtn, .checkBtn, .nextBtn {
+	background: #fff;
+	padding: 9px 20px 11px;
 	@include border-radius(10px);
 	font: bold 24px "Helvetica Neue";
-	border: 1px solid #86cd39;
-	color: #fff;
+	border: 1px solid #ccc;
+	color: #999;
 	text-decoration: none;
 	display: inline-block;
+	@include text-shadow(0 -1px 0 #fff);
 
 }
-.checkBtn {
-	background: #407ccd;
-	padding: 10px 20px;
-	@include border-radius(10px);
-	font: bold 16px "Helvetica Neue";
-	border: 1px solid #407ccd;
+.checkBtn, .nextBtn {
+	padding: 5px 15px 7px;
+	font: bold 13px "Helvetica Neue";
+	@include border-radius(5px);
+	background: #529807;
 	color: #fff;
-	text-decoration: none;
-	display: inline-block;
-
+	@include text-shadow(0 -1px 0 #000);
+	border: 1px solid #529807;
 }
 
 #header {
@@ -122,11 +157,6 @@ html, body {
 	border-bottom: 1px solid #ddd;
 	@include box-shadow(0 3px 3px #eee);
 
-	h1 {
-		text-align: center;
-		font: bold 16px "Helvetica Neue";
-		margin-top: 8px;
-	}
 }
 
 #footer-controls {
@@ -136,39 +166,50 @@ html, body {
 	right: 0;
 	height: 40px;
 	background: #fff;
-	border-top: 1px solid #ddd;
-	@include box-shadow(0 -3px 3px #eee);
+	border-top: 1px solid #000;
+	background: #222;
 
 	ul {
-		text-align: center;
-		margin-top: 10px;
+		height: 40px;
+		@include display-box;
 
 		li {
-			height: 16px;
-			width: 16px;
-			margin: 0 2px;
-			display: inline-block;
-			background: #ddd;
-			@include border-radius(100%);
+			padding: 10px;
+			border-right: 1px solid #000;
+			border-left: 1px solid #333;
+			font: bold 13px "Helvetica Neue";
+			color: #ccc;
+			@include text-shadow(0 -1px 0 #000);
+
+			&:first-child {
+				border-left: none;
+			}
+			&:last-child {
+				border-right: none;
+				@include box-flex(1);
+			}
+		
+			a.btn {
+				float: right;
+				font: bold 13px "Helvetica Neue";
+				color: #ccc;
+				@include text-shadow(0 1px 0 #000);
+				text-decoration: none;
+				border: 1px solid #000;
+				@include border-radius(4px);
+				position: relative;
+				top: -4px;
+				@include box-shadow(0 1px 0 #333);
+				display: inline-block;
+
+				span {
+					padding: 4px 10px 5px;
+					display: block;
+					@include box-shadow(0 1px 0 #333 inset);
+					@include border-radius(4px);
+				}
+			}
 		}
+
 	}
-}
-
-.clicker {
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-	background: #fff;
-	position: absolute;
-	cursor: pointer;
-	@include box-shadow(0 0 6px #ccc);
-}
-
-.clicker-left {
-	left: 20px;
-	top: 40%;
-}
-.clicker-right {
-	right: 20px;
-	top: 40%;
 }

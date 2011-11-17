@@ -2,19 +2,16 @@
 <html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>spell</title>
-  <link rel="stylesheet" href="css/screen.css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, mobile" title="main" charset="utf-8">
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
 </head>
 <body>
-
-	<div class="clicker clicker-left"></div>
-	<div class="clicker clicker-right"></div>
-
-	<div id="header">
-		<h1>Tough Words</h1>
-	</div>
-
 
 	<div id="container">
 		<ul id="list">
@@ -26,33 +23,50 @@
 						<li>given to tears or weeping </li>
 						<li>tending to cause tears</li>
 					</ol>
-					<input type="text" />
+					<input type="text" autocomplete="off" autocorrection="off" autocapitalize="off"/>
 					<a class="checkBtn" href="#">Check</a>
-					<div class="answer correct">✔ Correct</div>
-					<div class="answer incorrect">✖ Incorrect</div>
 				</div>
+				<div class="answer-screen answer-correct">
+					<div class="text"><span class="correct">✔</span>Correct!</div>
+					<a class="nextBtn" href="#">Next</a>
+				</div>
+				<div class="answer-screen answer-incorrect">
+					<div class="text"><span class="incorrect">✖</span>Oops!</div>
+					<a class="nextBtn" href="#">Next</a>
+				</div>
+			 	<div class="answer-bkg"><div>
 			</li>
 			<li class="panel" data-word="mournful">
 				<div class="word-wrap">
 					<a class="playBtn" href="#">Play Word</a>
 					<h2>Definition</h2>
 					<ol>
-						<li>something </li>
+						<li>given to tears or weeping </li>
 						<li>tending to cause tears</li>
 					</ol>
-					<input type="text" />
+					<input type="text" autocomplete="off" autocapitalize="off"/>
 					<a class="checkBtn" href="#">Check</a>
-					<div class="answer correct">✓ Correct</div>
-					<div class="answer incorrect">✖ Incorrect</div>
 				</div>
+				<div class="answer-screen answer-correct">
+					<div class="text"><span class="correct">✔</span>Correct!</div>
+					<a class="nextBtn" href="#">Next</a>
+				</div>
+				<div class="answer-screen answer-incorrect">
+					<div class="text"><span class="incorrect">✖</span>Oops!</div>
+					<a class="nextBtn" href="#">Next</a>
+				</div>
+			 	<div class="answer-bkg"><div>
 			</li>
 		</ul>
 	</div>
 
+
 	<div id="footer-controls">
 		<ul>
-			<li></li>
-			<li></li>
+			<li>1 of 10</li>
+			<li class="correct"><span>✔</span> 4</li>
+			<li class="incorrect"><span>✖</span> 2</li>
+			<li><a class="btn" href="#"><span>Home</span></a></li>
 		</ul>
 	</div>
 
