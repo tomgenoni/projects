@@ -91,8 +91,8 @@ Class Helpers {
       }
     }
 
-    # sort list in reverse-numeric order
-    krsort($files, SORT_NUMERIC);
+    # sort list in numeric order
+    ksort($files, SORT_NUMERIC);
     return $files;
   }
 
