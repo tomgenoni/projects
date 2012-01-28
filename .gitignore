@@ -1,5 +1,5 @@
 .DS_Store
-spell/compass_app_log.txt
-spell/.sass-cache/*
+*/compass_app_log.txt
+*/.sass-cache/*
 */.dropbox
-jena/content/Icon\r
+jena/content/Icon
