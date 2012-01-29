@@ -30,18 +30,21 @@ $(document).ready(function() {
                         var title = $(this).find('title').text();
                         var link = $(this).find('link').attr("href");
 
-                        // for every element in the XML that's not an img
-                        // grab that text and stick it in a <p> in each .entry
-                        // and add a link to the page it originated on
+                        // for every element in the XML that's NOT an <img>
+                        // grab just its text and stick it in a div.element>p inside each .entry
+                        // and add a link to the page it originated on with the searchTerm appended
                         $(this).find("content > div > *:not(img)").each(function() {
                             var content = $(this).text();
                             $("#content .entry").eq(i).append("<div class='element'><p>" + content + "</p><div class='search-link'><a href='" + link + "?searchTerm=" + searchTerm + "'>" + title + "</a></div></div>");
                         });
-                        // All .element are hidden by default, this makes them visible
+                        // Now we have all the text from the entire website on one page but
+                        // All .element are hidden by default, this makes only those with searchTerm visible.
                         $("#content p:contains(" + searchTerm + ")").closest(".element").addClass("found");
                     }
                 });
 
+                // Only do this if there are actually found searchTerms
+                // otherwise tell the user we didn't find anything
                 if ($(".found").length) {
                     // add a .highlight class to each term found in each <p>
                     $(".found p").highlight(searchTerm);
