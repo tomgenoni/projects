@@ -2,11 +2,11 @@
 		margin: 100px;
 	}
 		
-	#content .entry {
+	#content .element {
 		display: none;
 		font: 11px/15px "Lucida Grande";
 	}
-	#content .entry.found {
+	#content .element.found {
 		display: block;
 	}
 
@@ -20,6 +20,6 @@
 		display: block;
 	}
 
-	.entry {
+	.element {
 		margin: 40px 0;
 	}
