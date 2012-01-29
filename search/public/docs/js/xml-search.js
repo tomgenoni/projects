@@ -19,7 +19,6 @@ $(document).ready(function() {
                 success: parseXml
             });
 
-
             function parseXml(xml) {
                 // go through each <entry> in the xml
                 $(xml).find("entry").each(function(i) {
@@ -72,9 +71,7 @@ $(document).ready(function() {
         return false;
     });
 
-
     // If URL loads with a DOM eq location variable
-
     function getQueryVariable(variable) {
         // get the URL
         var query = window.location.search.substring(1);
