@@ -16,20 +16,20 @@ $(document).ready(function() {
                 success: parseXml
             });
 
+
             function parseXml(xml) {
                 $(xml).find("entry").each(function() {
                     if ($(this).find("content > div").text() != "") {
                         var title = $(this).find('title').text();
                         var link = $(this).find('link').attr("href");
-                        counter = 0;
                         $(this).find("content > div > *:not(img)").each(function() {
                             var content = $(this).text();
-                            $("#content").append("<div class='entry'><p>" + content + "</p><div class='search-link'><a href='" + link + "?eq=" + counter + "&searchTerm="+searchTerm+"'>" + title + "</a></div></div>");
-                            counter++;
+                            $("#content").append("<div class='entry'><p>" + content + "</p><div class='search-link'><a href='" + link + "?searchTerm="+searchTerm+"'>" + title + "</a></div></div>");
                         });
-                        $("#content p:contains(" + searchTerm + ")").closest(".entry").addClass("found").highlight(searchTerm);
+                        $("#content p:contains(" + searchTerm + ")").closest(".entry").addClass("found");
                     }
                 });
+                $(".found p").highlight(searchTerm);
             }
         }
         return false;
@@ -59,7 +59,7 @@ $(document).ready(function() {
         $("#content").highlight(searchTerm);
 
         $('html,body').animate({
-            scrollTop: $("#content > *:not(img) ").eq(foundDomEq).offset().top
+            scrollTop: $("#content > *:not(p>img) ").eq(foundDomEq).offset().top
         }, {
             duration: 'slow'
         });

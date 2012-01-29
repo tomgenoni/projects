@@ -11,10 +11,13 @@
 	}
 
 	.highlight {
-		background-color: olive;
-		color: #fff;
-		padding: 1px 1px 2px;
+		background-color: #d0f8bb;
+		padding: 1px 3px 2px;
 		border-radius: 2px;
+	}
+
+	img {
+		display: block;
 	}
 
 	.entry {
