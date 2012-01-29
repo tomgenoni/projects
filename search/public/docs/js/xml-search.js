@@ -25,7 +25,7 @@ $(document).ready(function() {
                 $(xml).find("entry").each(function(i) {
                     // create a holder for each entry
                     $("#content").append("<div class='entry'></div>")
-                    
+
                     // if the entry actually has some content, it'll be empty otherwise
                     if ($(this).find("content > div").text() != "") {
                         var title = $(this).find('title').text();
@@ -51,7 +51,7 @@ $(document).ready(function() {
                 $(".entry").each(function() {
                     // start with -1 because it's the array number 0 that we want to start at;
                     counter = -1;
-                    $(this).find(".found").each(function(){
+                    $(this).find(".found").each(function() {
                         $(this).find(".highlight").each(function() {
                             // the counter value will equal the number of .highlight classes
                             // it finds inside the .found results which will be one or greater
@@ -71,6 +71,8 @@ $(document).ready(function() {
 
 
     // If URL loads with a DOM eq location variable
+
+
     function getQueryVariable(variable) {
         // get the URL
         var query = window.location.search.substring(1);
@@ -90,20 +92,20 @@ $(document).ready(function() {
     var foundDomEq = getQueryVariable("eq");
 
     // if the DOM eq is available in the URL
-    if (foundDomEq != null && searchTerm !=null) {
+    if (searchTerm != null) {
         // highlight the search terms
         $("#content").highlight(searchTerm);
 
-        // wait for the window to complete loading
-        // then scroll to the appropriate highlight
-        $(window).load(function() {
-            $('html,body').animate({
-                scrollTop: $("#content .highlight").eq(foundDomEq).offset().top
-            }, {
-                duration: 'slow'
+        if (foundDomEq != null) {
+            // wait for the window to complete loading
+            // then scroll to the appropriate highlight
+            $(window).load(function() {
+                $('html,body').animate({
+                    scrollTop: $("#content .highlight").eq(foundDomEq).offset().top
+                }, {
+                    duration: 'slow'
+                });
             });
-        });
-
+        }
     }
-
 });
