@@ -43,27 +43,30 @@ $(document).ready(function() {
                     }
                 });
 
-                // add a .highlight class to each term found in each <p>
-                $(".found p").highlight(searchTerm);
+                if ($(".found").length) {
+                    // add a .highlight class to each term found in each <p>
+                    $(".found p").highlight(searchTerm);
 
-                // adding the eq= variable to the URL. Have to loop through each entry
-                // then each .found, then each .highlight to get the correct count
-                $(".entry").each(function() {
-                    // start with -1 because it's the array number 0 that we want to start at;
-                    counter = -1;
-                    $(this).find(".found").each(function() {
-                        $(this).find(".highlight").each(function() {
-                            // the counter value will equal the number of .highlight classes
-                            // it finds inside the .found results which will be one or greater
-                            // so the counter will be >= 0
-                            counter++;
+                    // adding the eq= variable to the URL. Have to loop through each entry
+                    // then each .found, then each .highlight to get the correct count
+                    $(".entry").each(function() {
+                        // start with -1 because it's the array number 0 that we want to start at;
+                        counter = -1;
+                        $(this).find(".found").each(function() {
+                            $(this).find(".highlight").each(function() {
+                                // the counter value will equal the number of .highlight classes
+                                // it finds inside the .found results which will be one or greater
+                                // so the counter will be >= 0
+                                counter++;
+                            })
+                            // get the URL and append the eq value
+                            var foundURL = $(this).find('.search-link a').attr("href");
+                            $(this).find('.search-link a').attr("href", foundURL + "&eq=" + counter);
                         })
-                        // get the URL and append the eq value
-                        var foundURL = $(this).find('.search-link a').attr("href");
-                        $(this).find('.search-link a').attr("href", foundURL + "&eq=" + counter);
                     })
-                })
-
+                } else {
+                    $("#content").html("<div id='results-empty'>Sorry, nothing was found for <b>" + searchTerm + "</b></div>")
+                }
             }
         }
         return false;
@@ -71,7 +74,6 @@ $(document).ready(function() {
 
 
     // If URL loads with a DOM eq location variable
-
 
     function getQueryVariable(variable) {
         // get the URL
