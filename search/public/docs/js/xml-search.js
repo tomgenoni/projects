@@ -1,3 +1,7 @@
+// TODO: find whole word search
+// allow different case.
+// trim white space from input
+
 $(document).ready(function() {
 
     // When the search is started

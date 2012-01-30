@@ -1,13 +1,20 @@
+a {
+color: #0E728E;
+text-decoration: none;
+}
 	body {
 		margin: 100px;
 	}
 		
 	#content .element {
 		display: none;
-		font: 11px/15px "Lucida Grande";
 	}
 	#content .element.found {
 		display: block;
+		font: 11px/15px "Lucida Grande";
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px;
+		margin-top: 20px;
 	}
 
 	.highlight {
@@ -21,5 +28,4 @@
 	}
 
 	.element {
-		margin: 40px 0;
 	}
