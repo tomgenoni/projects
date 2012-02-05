@@ -3,11 +3,26 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title>@title : Jennifer Albrecht Training</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="@root_path/public/docs/css/reset.css" type="text/css" media="screen"> 
     <link rel="stylesheet" href="@root_path/public/docs/css/screen.css" type="text/css" media="screen"> 
   </head>
   <body>
-      :navigation
-      @content
+    <div id="header">
+      <div class="container">
+        :navigation
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="container">
+        <div id="main-content">@content</div>
+        <div id="sidebar">sidebar</div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        footer
+      </div>
     </div>
   </body>
 </html>

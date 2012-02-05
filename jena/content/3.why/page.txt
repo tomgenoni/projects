@@ -4,19 +4,21 @@ content:
 
 # Why Compaines Hire Coaches
 
-Business planning, budgeting and goal setting
-Achieve maximum work performance
-Increase sales substantially
-Make key decisions and design strategies
-Prioritize actions and projects
-Integrate business and personal life for balance
-Turn a difficult situation around
-Handle business or personal problems
-Catch up and get ahead of the business
-To ease the appointment and transition of individuals into a more senior or different role
-To structure and support the personal development of individuals defined as ‘high potential’
-To underpin the effective implementation of organizational change
-To provide a trusted advisor or independent sounding board to a senior individual
-To support senior staff engaged in wider personal effectiveness programs, such as 360 degree appraisals or other assessment centers
-As a means of supporting and retaining key staff critical to the business in times of change and uncertainty
-To encourage the independent working of teams so they can identify and develop their own solutions
+Introduction text here aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+- Business planning, budgeting and goal setting
+- Achieve maximum work performance
+- Increase sales substantially
+- Make key decisions and design strategies
+- Prioritize actions and projects
+- Integrate business and personal life for balance
+- Turn a difficult situation around
+- Handle business or personal problems
+- Catch up and get ahead of the business
+- To ease the appointment and transition of individuals into a more senior or different role
+- To structure and support the personal development of individuals defined as ‘high potential’
+- To underpin the effective implementation of organizational change
+- To provide a trusted advisor or independent sounding board to a senior individual
+- To support senior staff engaged in wider personal effectiveness programs, such as 360 degree appraisals or other assessment centers
+- As a means of supporting and retaining key staff critical to the business in times of change and uncertainty
+- To encourage the independent working of teams so they can identify and develop their own solutions
