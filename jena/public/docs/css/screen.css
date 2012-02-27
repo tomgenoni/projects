@@ -1,6 +1,6 @@
 body {
 	font: 14px/23px Georgia, Times, serif;
-	background:#aaa;
+	background:#eee;
 	color: #222;
 }
 
@@ -60,13 +60,12 @@ sup {
 #navigation li {
 	float: left;
 	margin-left: 15px;
-	font: normal 16px Lato, Helvetica, sans;
+	font: normal 17px Lato, Helvetica, sans;
 }
 #navigation li a {
 	text-decoration: none;
 	color: #fff;
 	opacity: .5;
-	text-transform: uppercase;
 }
 h1 {
 	font: normal 40px Lato, Helvetica, sans;
@@ -94,7 +93,7 @@ h2 {
 }
 
 #footer {
-	border-top: 4px solid #777;
+	border-top: 4px solid #aaa;
 }
 
 #footer .container {
