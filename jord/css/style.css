@@ -1,0 +1,81 @@
+a:link {color: #000000; text-decoration: underline; }
+a:active {color: #a38a5d; text-decoration: underline; }
+a:visited {color: #a38a5d; text-decoration: underline; }
+a:hover {color: #ff0000; text-decoration: none; }
+
+html,body {
+	height: 100%;
+	font: 17px/22px Buenard, Georgia, serif;
+}
+
+body {
+	background: #eee;
+}
+
+p {
+	margin-bottom: 7px;
+}
+
+#box {
+	background-color: rgba(255,255,255,.5);
+	width: 270px;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	padding: 20px 25px;
+	margin: 0px;
+	z-index: 1;
+}
+
+@media screen and (max-width:480px) {
+	#box {
+		position: relative;
+		background: none;
+	}
+}
+
+#bkg-imgs {
+	display: block;
+}
+
+
+#bkg-imgs li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.divider {
+	display: none;
+	height: 0;
+}
+
+@media screen and (max-width:480px) {
+
+	#bkg-imgs {
+		display: none;
+	}
+
+	.divider {
+		display: block;
+		height: 100px;
+		margin: 15px -25px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+
+
