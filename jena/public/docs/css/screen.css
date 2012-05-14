@@ -1,7 +1,13 @@
 body {
 	font: 14px/23px Georgia, Times, serif;
-	background:#eee;
+	background:#fff;
 	color: #222;
+	border-top: 4px solid #ddd;
+}
+
+a {
+	color: #0E728E;
+	text-decoration: none;
 }
 
 ul {
@@ -37,6 +43,7 @@ sup {
 .container {
 	width: 800px;
 	margin: 0 auto;
+	position: relative;
 }
 
 #wrapper {
@@ -46,36 +53,77 @@ sup {
 
 #header {
 	overflow: hidden;
-	border-bottom: 4px solid #5e065c;
-	padding: 40px 0 20px;
-	background: #831081;
+	padding: 40px 0 32px;
 }
+
+#logo {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	margin-left: 0;
+	text-transform: uppercase;
+	font: normal 22px "Helvetica Neue", Helvetica, sans;
+	color: #000;
+	opacity: 1;
+	-moz-opacity: 1;
+	filter:alpha(opacity=1);
+}
+#logo span {
+	color: #720970;
+}
+#subtitle {
+	position: absolute;
+	top: 26px;
+	left: 0;
+	white-space: nowrap;
+	font: normal 13px "Helvetica Neue", Helvetica, sans;
+	color: #666;
+}
+#subtitle span {
+	color: #000;
+}
+
+
 
 #navigation {
 	overflow: hidden;
-	float: right;
 	list-style: none;
 	margin: 0;
+	float: right;
 }
 #navigation li {
-	float: left;
-	margin-left: 15px;
-	font: normal 17px Lato, Helvetica, sans;
+	display: inline-block;
+	margin-left: 10px;
+	font: normal 16px "Helvetica Neue", Helvetica, sans;
 }
 #navigation li a {
 	text-decoration: none;
-	color: #fff;
 	opacity: .5;
+	-moz-opacity: .5;
+	filter:alpha(opacity=.5);
+	color: #720970;
 }
+#navigation li.active a {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter:alpha(opacity=1);
+}
+
 h1 {
-	font: normal 40px Lato, Helvetica, sans;
+	font: normal 35px "Helvetica Neue", Helvetica, sans;
 	margin-bottom: 20px;
 	color: #720970;
 }
 h2 {
-	font: normal 28px Lato, Helvetica, sans;
+	font: normal 25px "Helvetica Neue", Helvetica, sans;
 	color: #666;
 	margin: 20px 0 15px;
+}
+
+h3 {
+	color: #720970;
+	font-size: 18px;
+	margin-bottom: 7px;
 }
 
 #wrapper .container {
@@ -90,11 +138,61 @@ h2 {
 #sidebar {
 	float: right;
 	width: 200px;
+	font: normal 13px "Helvetica Neue", Helvetica, sans;
+}
+#sidebar .element {
+	margin-bottom: 12px;
+	display: block;
+	background: #f5f5f5;
+	border-radius: 5px;
+	border: 3px solid #ddd;
+	padding: 10px 12px 3px;
+}
+#sidebar .element:hover {
+	border-color: #720970;
 }
 
+
 #footer {
-	border-top: 4px solid #aaa;
+	border-top: 3px solid #ddd;
+	overflow: hidden;
+	padding-bottom: 50px;
 }
+#footer a {
+	float: left;
+	margin-right: 10px;
+	padding-top: 100px;
+	height: 0 !important;
+	overflow: hidden;
+	width: 100px;
+	background: url(/docs/i/logo-sprite.png);
+}
+#footer #icon-astd {
+	background-position: 0 -100px;
+}
+#footer #icon-astd:hover {
+	background-position: 0 0;
+}
+#footer #icon-icf {
+	background-position: -100px -100px;
+}
+#footer #icon-icf:hover {
+	background-position: -100px 0;
+}
+#footer #icon-coachu {
+	background-position: -200px -100px;
+}
+#footer #icon-coachu:hover {
+	background-position: -200px 0;
+}
+#footer #icon-learnit {
+	background-position: -300px -100px;
+}
+#footer #icon-learnit:hover {
+	background-position: -300px 0;
+}
+
+
 
 #footer .container {
 	padding: 20px 0;

@@ -1,6 +1,9 @@
+<a id="logo" href="/">Jennifer <span>Albrecht</span> Coaching</a>
+<div id="subtitle">explore. <span>commit.</span> achieve.</div>
+
 <ul id="navigation">
   foreach $root do
-    <li>
+    <li if @is_current do class="active" endif>
       <a href="@url">@title</a>
       :children
     </li>
