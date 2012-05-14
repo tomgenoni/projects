@@ -1,0 +1,111 @@
+<!DOCTYPE html><html><head><title>core/element/_table.scss | Core Docs</title><meta charset="utf-8"><link rel="stylesheet" href="../docs.css"></head><body><div class="styledocco-container"><div class="styledocco-sidebar"><a href="../index.html" class="styledocco-brand">Core Docs</a><ul class="styledocco-nav"><li><a href="../html/core-_core.html">_core
+</a></li></ul><strong class="styledocco-nav-heading">common</strong><ul class="styledocco-nav"><li><a href="../html/core-common-_color.html">_color
+</a></li><li><a href="../html/core-common-_layout.html">_layout
+</a></li><li><a href="../html/core-common-_mixin.html">_mixin
+</a></li><li><a href="../html/core-common-_reset.html">_reset
+</a></li><li><a href="../html/core-common-_typography.html">_typography
+</a></li></ul><strong class="styledocco-nav-heading">element</strong><ul class="styledocco-nav"><li><a href="../html/core-element-_a.html">_a
+</a></li><li><a href="../html/core-element-_aside.html">_aside
+</a></li><li><a href="../html/core-element-_b.html">_b
+</a></li><li><a href="../html/core-element-_blockquote.html">_blockquote
+</a></li><li><a href="../html/core-element-_body.html">_body
+</a></li><li><a href="../html/core-element-_cite.html">_cite
+</a></li><li><a href="../html/core-element-_dfn.html">_dfn
+</a></li><li><a href="../html/core-element-_em.html">_em
+</a></li><li><a href="../html/core-element-_figure.html">_figure
+</a></li><li><a href="../html/core-element-_h1.html">_h1
+</a></li><li><a href="../html/core-element-_h2.html">_h2
+</a></li><li><a href="../html/core-element-_h3.html">_h3
+</a></li><li><a href="../html/core-element-_h4.html">_h4
+</a></li><li><a href="../html/core-element-_h5.html">_h5
+</a></li><li><a href="../html/core-element-_h6.html">_h6
+</a></li><li><a href="../html/core-element-_header.html">_header
+</a></li><li><a href="../html/core-element-_hgroup.html">_hgroup
+</a></li><li><a href="../html/core-element-_html.html">_html
+</a></li><li><a href="../html/core-element-_i.html">_i
+</a></li><li><a href="../html/core-element-_img.html">_img
+</a></li><li><a href="../html/core-element-_ol.html">_ol
+</a></li><li><a href="../html/core-element-_p.html">_p
+</a></li><li><a href="../html/core-element-_q.html">_q
+</a></li><li><a href="../html/core-element-_section.html">_section
+</a></li><li><a href="../html/core-element-_small.html">_small
+</a></li><li><a href="../html/core-element-_strong.html">_strong
+</a></li><li><a href="../html/core-element-_sub.html">_sub
+</a></li><li><a href="../html/core-element-_sup.html">_sup
+</a></li><li><a href="../html/core-element-_table.html">_table
+</a></li><li><a href="../html/core-element-_ul.html">_ul
+</a></li><li><a href="../html/core-element-_var.html">_var
+</a></li></ul><strong class="styledocco-nav-heading">pattern</strong><ul class="styledocco-nav"><li><a href="../html/core-pattern-_callout.html">_callout
+</a></li><li><a href="../html/core-pattern-_counter-chapter.html">_counter-chapter
+</a></li><li><a href="../html/core-pattern-_equation-key.html">_equation-key
+</a></li><li><a href="../html/core-pattern-_figure-badge.html">_figure-badge
+</a></li><li><a href="../html/core-pattern-_figure-caption-position.html">_figure-caption-position
+</a></li><li><a href="../html/core-pattern-_figure-center.html">_figure-center
+</a></li><li><a href="../html/core-pattern-_figure-pair.html">_figure-pair
+</a></li><li><a href="../html/core-pattern-_figure-truncation.html">_figure-truncation
+</a></li><li><a href="../html/core-pattern-_fraction.html">_fraction
+</a></li><li><a href="../html/core-pattern-_inline-header.html">_inline-header
+</a></li><li><a href="../html/core-pattern-_key-term-cloud-extended.html">_key-term-cloud-extended
+</a></li><li><a href="../html/core-pattern-_key-term-cloud.html">_key-term-cloud
+</a></li><li><a href="../html/core-pattern-_key-term-location.html">_key-term-location
+</a></li><li><a href="../html/core-pattern-_list-step.html">_list-step
+</a></li><li><a href="../html/core-pattern-_s9-answer.html">_s9-answer
+</a></li><li><a href="../html/core-pattern-_s9-scrollable.html">_s9-scrollable
+</a></li><li><a href="../html/core-pattern-_sidenote.html">_sidenote
+</a></li><li><a href="../html/core-pattern-_text-dropcap.html">_text-dropcap
+</a></li><li><a href="../html/core-pattern-_text-image.html">_text-image
+</a></li></ul></div><div class="styledocco-main"><div id="section-1" class="styledocco-section"><div class="styledocco-docs"><a href="#section-1" class="pilcrow">&#182;</a><h1>Table</h1>
+<p> Default table style. This should be overriden or added to in &#39;custom&#39;.
+</p>
+<p> Note: long unbroken strings like <a href="http://url.com/long/path">http://url.com/long/path</a>
+ in table-cells sometimes do not wrap. Use the class &#39;.force-break&#39; found in _typography.scss on the anchor or other long inline element you want to break.
+
+</p>
+<p> Some default style options:
+
+</p>
+<ul>
+<li><code>.table-border</code> - Adds border around each table cell.</li>
+<li><code>.table-border-outer</code> - Adds border around entire table.</li>
+<li><code>.table-zebra</code> - Every other table row is hightlighted.</li>
+</ul>
+</div><div class="styledocco-code"><pre><code>table {
+    width: 100%;
+    font-size: 1em;
+    border: none;
+    margin: 1em 0;
+
+    tbody tr td {
+        border: 1px solid #ddd;
+    }
+    thead tr td, tbody tr td, tfoot tr td {
+        background: transparent;
+    }
+
+    thead tr td {
+        font-weight: 700;
+    }
+
+    td {
+        padding: .2em .5em;
+        @include sans;
+    }
+
+    tfoot td {
+        font-size: .9em;
+    }
+
+    &amp;.table-border-outer tbody {
+        border: 1px solid #CCC;
+    }
+
+
+    &amp;.table-zebra {
+        tbody tr:nth-child(even) {
+            background: #eee;
+        }
+        tbody tr:nth-child(odd) {
+            background: #fff;
+        }
+    }
+}</code></pre></div></div></div></div><script src="../docs.js"></script></body></html><!-- Generated with StyleDocco (http://jacobrask.github.com/styledocco). -->

@@ -1,0 +1,431 @@
+<!DOCTYPE html><html><head><title>core/pattern/_callout.scss | Core Docs</title><meta charset="utf-8"><link rel="stylesheet" href="../docs.css"></head><body><div class="styledocco-container"><div class="styledocco-sidebar"><a href="../index.html" class="styledocco-brand">Core Docs</a><ul class="styledocco-nav"><li><a href="../html/core-_core.html">_core
+</a></li></ul><strong class="styledocco-nav-heading">common</strong><ul class="styledocco-nav"><li><a href="../html/core-common-_color.html">_color
+</a></li><li><a href="../html/core-common-_layout.html">_layout
+</a></li><li><a href="../html/core-common-_mixin.html">_mixin
+</a></li><li><a href="../html/core-common-_reset.html">_reset
+</a></li><li><a href="../html/core-common-_typography.html">_typography
+</a></li></ul><strong class="styledocco-nav-heading">element</strong><ul class="styledocco-nav"><li><a href="../html/core-element-_a.html">_a
+</a></li><li><a href="../html/core-element-_aside.html">_aside
+</a></li><li><a href="../html/core-element-_b.html">_b
+</a></li><li><a href="../html/core-element-_blockquote.html">_blockquote
+</a></li><li><a href="../html/core-element-_body.html">_body
+</a></li><li><a href="../html/core-element-_cite.html">_cite
+</a></li><li><a href="../html/core-element-_dfn.html">_dfn
+</a></li><li><a href="../html/core-element-_em.html">_em
+</a></li><li><a href="../html/core-element-_figure.html">_figure
+</a></li><li><a href="../html/core-element-_h1.html">_h1
+</a></li><li><a href="../html/core-element-_h2.html">_h2
+</a></li><li><a href="../html/core-element-_h3.html">_h3
+</a></li><li><a href="../html/core-element-_h4.html">_h4
+</a></li><li><a href="../html/core-element-_h5.html">_h5
+</a></li><li><a href="../html/core-element-_h6.html">_h6
+</a></li><li><a href="../html/core-element-_header.html">_header
+</a></li><li><a href="../html/core-element-_hgroup.html">_hgroup
+</a></li><li><a href="../html/core-element-_html.html">_html
+</a></li><li><a href="../html/core-element-_i.html">_i
+</a></li><li><a href="../html/core-element-_img.html">_img
+</a></li><li><a href="../html/core-element-_ol.html">_ol
+</a></li><li><a href="../html/core-element-_p.html">_p
+</a></li><li><a href="../html/core-element-_q.html">_q
+</a></li><li><a href="../html/core-element-_section.html">_section
+</a></li><li><a href="../html/core-element-_small.html">_small
+</a></li><li><a href="../html/core-element-_strong.html">_strong
+</a></li><li><a href="../html/core-element-_sub.html">_sub
+</a></li><li><a href="../html/core-element-_sup.html">_sup
+</a></li><li><a href="../html/core-element-_table.html">_table
+</a></li><li><a href="../html/core-element-_ul.html">_ul
+</a></li><li><a href="../html/core-element-_var.html">_var
+</a></li></ul><strong class="styledocco-nav-heading">pattern</strong><ul class="styledocco-nav"><li><a href="../html/core-pattern-_callout.html">_callout
+</a></li><li><a href="../html/core-pattern-_counter-chapter.html">_counter-chapter
+</a></li><li><a href="../html/core-pattern-_equation-key.html">_equation-key
+</a></li><li><a href="../html/core-pattern-_figure-badge.html">_figure-badge
+</a></li><li><a href="../html/core-pattern-_figure-caption-position.html">_figure-caption-position
+</a></li><li><a href="../html/core-pattern-_figure-center.html">_figure-center
+</a></li><li><a href="../html/core-pattern-_figure-pair.html">_figure-pair
+</a></li><li><a href="../html/core-pattern-_figure-truncation.html">_figure-truncation
+</a></li><li><a href="../html/core-pattern-_fraction.html">_fraction
+</a></li><li><a href="../html/core-pattern-_inline-header.html">_inline-header
+</a></li><li><a href="../html/core-pattern-_key-term-cloud-extended.html">_key-term-cloud-extended
+</a></li><li><a href="../html/core-pattern-_key-term-cloud.html">_key-term-cloud
+</a></li><li><a href="../html/core-pattern-_key-term-location.html">_key-term-location
+</a></li><li><a href="../html/core-pattern-_list-step.html">_list-step
+</a></li><li><a href="../html/core-pattern-_s9-answer.html">_s9-answer
+</a></li><li><a href="../html/core-pattern-_s9-scrollable.html">_s9-scrollable
+</a></li><li><a href="../html/core-pattern-_sidenote.html">_sidenote
+</a></li><li><a href="../html/core-pattern-_text-dropcap.html">_text-dropcap
+</a></li><li><a href="../html/core-pattern-_text-image.html">_text-image
+</a></li></ul></div><div class="styledocco-main"><div id="section-1" class="styledocco-section"><div class="styledocco-docs"><a href="#section-1" class="pilcrow">&#182;</a><h1>Callout</h1>
+<p> This provides all code required to make default callouts on Inkling.
+</p>
+</div></div><div id="section-2" class="styledocco-section"><div class="styledocco-docs"><a href="#section-2" class="pilcrow">&#182;</a><h2>Mixin: Callout Heading</h2>
+<p> This mixin creates the bar across the top of callouts that have one. It uses the <code>@include image-mask</code> mixin for the icon. See the <a href="/pattern-library/core-patterns/callouts/basic/">Basic</a> and <a href="/pattern-library/core-patterns/callouts/basic-variations/">Audio/Video</a> callouts for examples.
+</p>
+</div><div class="styledocco-code"><pre><code>@mixin callout-heading($image) {
+    h4 {
+        padding-left: 50px;
+        &amp;:before {
+            content: "";
+            @include image-mask(30px,#{$image},30px,30px,#fff);
+            position: absolute;
+            top: 5px;
+            left: 10px
+        }
+    }
+}</code></pre></div></div><div id="section-3" class="styledocco-section"><div class="styledocco-docs"><a href="#section-3" class="pilcrow">&#182;</a><h2>Mixin: Arrow Right</h2>
+<p> Creates the dark background and arrow that appears to the right on nearly all the callouts.
+</p>
+</div><div class="styledocco-code"><pre><code>@mixin arrow-right($bgcolor) {
+    &amp;:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        bottom: 3px;
+        right:3px;
+        width: 30px;
+        @include border-radius(3px);
+        background: $bgcolor url(ui/callout-arrow.png) no-repeat 50% 50%;
+        @include background-size(6px 14px);
+    }
+}</code></pre></div></div><div id="section-4" class="styledocco-section"><div class="styledocco-docs"><a href="#section-4" class="pilcrow">&#182;</a><h2>Callout: Shared Code</h2>
+<p> This holds the code for all the callout types.
+</p>
+<p> Note the optional <code>.stack</code> class can only be used when there is no top bar — that is, an <code>&lt;h4&gt;</code> in the code.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout {
+    background: $color-4;
+    @include border-radius(3px);
+    @include box-shadow(0 0 5px #999);
+    padding: 8px 15px 15px 15px;
+    clear: both;
+    overflow: hidden;
+    min-height: 90px;
+
+    @media screen and (max-width: 480px) { 
+       min-height: 75px;
+    }
+
+    h4 {
+        background: $color-1;
+        @include box-shadow(0 0 3px #999);
+        color: #fff;
+        @include border-radius(3px);
+        margin: -4px -12px 15px;
+        padding: 8px 30px 8px 13px;
+        @include sans-med(1.1em);
+        position: relative;
+        z-index: 1;
+        @include arrow-right(transparent);
+
+        // added to make the right arrow line up with the h5 arrows
+        // overrides width in '@include arrow-right'
+        &amp;:after {
+            width: 24px;
+        }
+
+        @media screen and (max-width: 480px) { 
+            font-size: 1.0em;
+        }
+   }
+
+    figure {
+        width: 145px;
+        float: right;
+        margin: 0 0 0 1em;
+
+        img {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 480px) { 
+            float: none;
+            width: auto;  
+            margin: -15px 0 .7em 0; 
+        }
+    }
+
+    h5 {
+        @include sans-med(1.4em,1em);
+        margin-bottom: .2em;        
+        color: $color-1;
+
+        &amp;[href] {
+            margin: 0 0 5px;
+            border-bottom: 1px dashed #ccc;
+            padding: 12px 15px 12px 0;
+            position: relative;
+
+            &amp;:last-child {
+                border: none;
+                margin-bottom: 0;
+            }
+        }    
+
+        @media screen and (max-width: 480px) { 
+            padding-left: 0;
+            font-size: 1.2em;
+        }
+    }
+
+    h4 + h5[href] {
+        margin-top: -10px;
+    }
+
+    h6 {
+        @include sans-med(.9em,normal,uppercase,.1em);        
+        margin-bottom: .2em;
+        color: $color-1;
+    }
+
+    p {
+        @include sans(.9em,normal);
+        color: #666;  
+        @include truncate-to-line(4);
+    }
+
+    &amp;.width-half {
+        figure {
+            float: none;
+            width: auto;
+            margin: -15px 0 .7em 0; 
+        }
+    }
+    &amp;.stack {
+        // 1px is required to allow the margin of the h4
+        // to move it down for a total of 3px
+        padding: 1px 0 0 0;
+
+        h4 {
+            background-image: none;
+            margin: 2px 3px 10px;
+            &amp;:after {
+                background-image: none;
+            }
+        }
+
+        h5 {
+            padding: 15px 15px 15px 55px;
+            margin-bottom: 0;
+            @include arrow-right($color-1);
+
+            &amp;:before {
+                content: "";
+                background: $color-1;
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                margin-top: -16px;
+                z-index: 1;
+                width: 30px;
+                height: 32px;
+            }
+        }
+    }
+}</code></pre></div></div><div id="section-5" class="styledocco-section"><div class="styledocco-docs"><a href="#section-5" class="pilcrow">&#182;</a><h2>Callout: Types</h2>
+<p> These are classes added to the default <code>.callout</code> class to provide specific icons for the top bar.
+</p>
+<p> Note that <code>.callout-custom</code> uses differnt CSS for the <code>&lt;h4&gt;</code> as any custom image is likely not to be used as an image-mask. In this case we&#39;re putting the image as a background-image on the <code>&lt;h4&gt;</code>.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout-web {
+    @include callout-heading('callout-web');
+}
+.callout-audio {
+    @include callout-heading('callout-audio');
+}
+.callout-video {
+    @include callout-heading('callout-video');
+}
+.callout-custom {
+    @include callout-heading('callout-custom');
+    h4 {
+        padding-left: 50px;
+        background-image: url("ui/callout-custom.png");
+        background-repeat: no-repeat;
+        background-position: 10px 5px;
+        @include background-size(30px,30px);
+        &amp;:before {
+            content: none;
+        }
+    }
+}</code></pre></div></div><div id="section-6" class="styledocco-section"><div class="styledocco-docs"><a href="#section-6" class="pilcrow">&#182;</a><h2>Callout: Simple</h2>
+<p> The simplest style of callout, does not have a top bar.
+
+</p>
+<p> Note that this <strong>does not</strong> support images.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout-simple {
+    @include display-box;
+    @include box-orient(vertical);
+    @include box-pack(center);
+    position: relative;
+    min-height: 74px;
+    padding-left: 0;
+
+    @media screen and (max-width: 480px) { 
+        min-height: 50px;
+        padding-bottom: 6px;
+    }
+
+    h5 {
+        margin-bottom: 0;
+        padding: 0 60px 0 15px;
+        @include arrow-right($color-1);
+    }
+    p {
+        padding: 5px 60px 0 15px;
+    }
+
+    &amp;.stack {
+        display: block;
+    }
+}</code></pre></div></div><div id="section-7" class="styledocco-section"><div class="styledocco-docs"><a href="#section-7" class="pilcrow">&#182;</a><h2>Callout: Assessment</h2>
+<p> Simple style callout with asssement type icon to the left.
+
+</p>
+<ul>
+<li><code>@extend .callout-simple;</code> extends the code for Callout: Simple.</li>
+<li><code>&amp;:before</code> adds the image via the <code>@include image-mask;</code>.</li>
+</ul>
+<p> Options are:
+
+</p>
+<ul>
+<li><code>.callout-assessment</code></li>
+<li><code>.callout-key-term</code></li>
+<li><code>.callout-table</code></li>
+</ul>
+</div><div class="styledocco-code"><pre><code>.callout-assessment {
+    @extend .callout-simple;
+
+    h5 {
+        padding-left: 70px;
+        @include arrow-right($color-1);
+
+        @media screen and (max-width: 480px) { 
+           padding-left: 55px;
+        }
+
+        &amp;:before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            margin-top: -20px;
+            z-index: 1;
+            @include image-mask(100%,assessment,41px,45px,$color-1);
+
+            @media screen and (max-width: 480px) { 
+               width: 30px;
+               height: 34px;
+               margin-top: -14px;
+           }
+        }
+    }
+}
+
+.callout-key-term {
+    @extend .callout-assessment;
+    
+    h5:before {
+        -webkit-mask-image: url('ui/keyterms.png');
+   }
+}
+.callout-table {
+    @extend .callout-assessment;
+    
+    h5:before {
+        -webkit-mask-image: url('ui/table.png');
+    }
+}</code></pre></div></div><div id="section-8" class="styledocco-section"><div class="styledocco-docs"><a href="#section-8" class="pilcrow">&#182;</a><h2>Callout: 3D &amp; Molecule</h2>
+<p> Based on the Basic style but allows for multiple links. Note that HTML is different when using multiple links. See <a href="/pattern-library/core-patterns/callouts/3d">3D</a> and <a href="/pattern-library/core-patterns/callouts/molecule/">Molecule</a> in the Pattern Library for HTML.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout-threed {
+    @include callout-heading('callout-custom');
+    padding-bottom: 5px;
+
+    h4:before {
+        -webkit-mask-image: url("ui/threed.png");
+        -webkit-mask-size: 27px;
+    }
+
+    &amp;.stack {
+        h4 {
+            padding-left: 15px;
+            &amp;:before {
+                content: none;
+            }
+        }
+        h5 {
+            &amp;:before {
+                @include image-mask(100%,threed,30px,34px,$color-1);
+            }
+        }
+    }
+}
+
+.callout-molecule {
+    @include callout-heading('callout-custom');
+    padding-bottom: 5px;
+
+    h4:before {
+        -webkit-mask-image: url("ui/molecule.png");
+        -webkit-mask-size: 27px;
+    }
+
+    &amp;.stack {
+        h4 {
+            padding-left: 15px;
+            &amp;:before {
+                content: none;
+            }
+        }
+        h5:before {
+            @include image-mask(100%,molecule,30px,34px,$color-1);
+        }
+    }
+}</code></pre></div></div><div id="section-9" class="styledocco-section"><div class="styledocco-docs"><a href="#section-9" class="pilcrow">&#182;</a><h2>Callout: Transcript</h2>
+<p> Often used with <a href="pattern-library/core-patterns/callouts/inline-audio/">Inline Audio</a> callout.
+
+</p>
+<p> <code>.callout + .callout-transcript</code> is used to remove counteract the default margin that would otherwise push it too far down.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout-transcript {
+    position: relative;
+    min-height: 0;
+    padding-bottom: 12px;
+
+    h5 {
+        @include arrow-right($color-1);
+        margin-bottom: 0;
+        font-size: 1.1em;
+    }
+}
+
+.callout + .callout-transcript {
+    margin-top: -.7em;
+}</code></pre></div></div><div id="section-10" class="styledocco-section"><div class="styledocco-docs"><a href="#section-10" class="pilcrow">&#182;</a><h2>Callout: Inline Audio</h2>
+<p> <code>.s9-audio-button-custom</code> is the button that interacts with the reader.js. Be careful if overriding the CSS for this button.
+</p>
+</div><div class="styledocco-code"><pre><code>.callout-inline-audio {
+    .s9-audio-button-custom {
+        margin-top: 23px;
+        display: inline-block;
+        padding: 7px 10px 5px 40px;
+        color: #fff;
+        text-decoration: none;
+        text-indent: 0;
+        text-align: left;
+        text-transform: none;
+        @include sans-semi(.8em,1.1em);
+        @include box-shadow(0 0 3px #999);
+        @include unselectable;
+        @include text-shadow(#0e507b 0px -1px);
+        @include border-radius(5px);
+        @include background-size(23px,14px);
+        background: $platform-color url(ui/audio_player.png) no-repeat 10px center;
+
+        &amp;.s9-active {
+            @include opacity(.5);
+        }
+    }
+}</code></pre></div></div></div></div><script src="../docs.js"></script></body></html><!-- Generated with StyleDocco (http://jacobrask.github.com/styledocco). -->
