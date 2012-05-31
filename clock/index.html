@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Clock</title>
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <script type="text/javascript" src="clock.js"></script>
+        <style type="text/css">
+
+            html,body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "HelveticaNeue";
+                font-weight: 600;
+                background: #000;
+                color: #fff;
+                display: -webkit-box;
+                -webkit-box-orient: horizontal;
+                -webkit-box-pack: center;
+                -webkit-box-align: center;
+            }
+
+            #content {
+                margin-top: -15px;
+            }
+
+            #day {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: -webkit-box;
+                margin-bottom: 20px;
+            }
+            #day li {
+                -webkit-box-flex: 1;
+                text-align: center;
+                color: #333;
+                font-size: 11px;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+            #day.mon li:nth-child(1),
+            #day.tue li:nth-child(2),
+            #day.wed li:nth-child(3),
+            #day.thu li:nth-child(4),
+            #day.fri li:nth-child(5),
+            #day.sat li:nth-child(6),
+            #day.sun li:nth-child(7) {
+                color: #fff;
+            }
+
+            #clock {
+                font-family: "HelveticaNeue-CondensedBold";
+                font-size: 205px;
+                line-height: 158px;
+                text-align: right;
+                overflow: hidden;
+                position: relative;
+                text-align: right;
+                width: 400px;
+                letter-spacing: -10px;
+                padding-right: 14px;
+            }
+            #clock:after {
+                content: "";
+                position: absolute;
+                top: 51%;
+                left: -100px;
+                right: -100px;
+                bottom: -20px;
+                box-shadow: inset 0 80px 80px #000;
+                opacity: .5;
+            }
+            #clock:before {
+                content: "";
+                position: absolute;
+                top: 51%;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background-color: #000;
+            }
+
+        </style>
+    </head>
+    <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+        <div id="content">
+            <ul id="day">
+                <li>MON</li>
+                <li>TUE</li>
+                <li>WED</li>
+                <li>THU</li>
+                <li>FRI</li>
+                <li>SAT</li>
+                <li>SUN</li>
+            </ul>
+            <div id="clock">&nbsp;</div>
+        </div>
+    </body>
+</html>
