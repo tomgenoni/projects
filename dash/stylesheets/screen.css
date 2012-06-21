@@ -84,31 +84,37 @@ a:hover {
 h2 {
   font-size: 16px;
   margin-bottom: 12px;
+}
+/* line 28, ../sass/screen.scss */
+#redpub h2 {
   padding-right: 66px;
 }
-/* line 29, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 h2 span {
   float: right;
   font-size: 13px;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 h3 {
   font-size: 11px;
   margin-bottom: 5px;
   padding-top: 3px;
-  padding-right: 66px;
   position: relative;
   border-top: 1px solid #ddd;
 }
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
+#redpub h3 {
+  padding-right: 66px;
+}
+/* line 49, ../sass/screen.scss */
 h3 span {
   float: right;
   font-size: 10px;
   color: #aaa;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -124,7 +130,7 @@ h3 span {
   height: 100%;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .col {
   width: 50%;
   padding: 30px 20px;
@@ -134,24 +140,24 @@ h3 span {
   height: 100%;
   overflow-x: auto;
 }
-/* line 64, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 .col:first-child {
   border-right: 1px dotted #ccc;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 .listing {
   margin-bottom: 10px;
   background: #fff;
 }
-/* line 73, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .listing .tool {
   position: absolute;
   top: 5px;
   width: 12px;
   height: 12px;
 }
-/* line 79, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .listing .tool.tool-hide {
   top: 7px;
   right: 23px;
@@ -162,17 +168,17 @@ h3 span {
   border-bottom: 8px solid #aaa;
   cursor: pointer;
 }
-/* line 89, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .listing .tool.tool-hide:hover {
   border-bottom-color: #006aa7;
 }
-/* line 93, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .listing .tool.tool-move {
   background: url(../i/arrow.png) no-repeat;
   right: 3px;
   cursor: ns-resize;
 }
-/* line 104, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .listing li {
   display: -webkit-box;
   display: -moz-box;
@@ -184,15 +190,15 @@ h3 span {
   box-orient: horizontal;
   margin-bottom: 3px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .listing li > div {
   padding-right: 5px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .listing li > div:last-child {
   padding-right: 0;
 }
-/* line 116, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .listing li .btn {
   font-size: 9px;
   text-transform: uppercase;
@@ -208,11 +214,11 @@ h3 span {
   line-height: 15px;
   display: block;
 }
-/* line 127, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .listing li .btn:hover {
   background: #006aa7;
 }
-/* line 133, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .listing li .ticket-description {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

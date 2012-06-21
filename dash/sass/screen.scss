@@ -24,7 +24,10 @@ a {
 h2 {
 	font-size: 16px;
 	margin-bottom: 12px;
-	padding-right: $tool-padding;
+
+	#redpub & {
+		padding-right: $tool-padding;
+	}
 
 	span {
 		float: right;
@@ -36,9 +39,12 @@ h3 {
 	font-size: 11px;
 	margin-bottom: 5px;
 	padding-top: 3px;
-	padding-right: $tool-padding;
 	position: relative;
 	border-top: 1px solid #ddd;
+
+	#redpub & {
+		padding-right: $tool-padding;
+	}
 
 	span {
 		float: right;
