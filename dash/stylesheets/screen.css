@@ -1,0 +1,226 @@
+/* line 17, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/screen.scss */
+html, body {
+  height: 100%;
+  font: 11px/17px "Lucida Grande";
+  background: #fff;
+}
+
+/* line 15, ../sass/screen.scss */
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* line 19, ../sass/screen.scss */
+a:hover {
+  color: #006aa7;
+}
+
+/* line 24, ../sass/screen.scss */
+h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  padding-right: 66px;
+}
+/* line 29, ../sass/screen.scss */
+h2 span {
+  float: right;
+  font-size: 13px;
+}
+
+/* line 35, ../sass/screen.scss */
+h3 {
+  font-size: 11px;
+  margin-bottom: 5px;
+  padding-top: 3px;
+  padding-right: 66px;
+  position: relative;
+  border-top: 1px solid #ddd;
+}
+/* line 43, ../sass/screen.scss */
+h3 span {
+  float: right;
+  font-size: 10px;
+  color: #aaa;
+}
+
+/* line 50, ../sass/screen.scss */
+#wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* line 57, ../sass/screen.scss */
+.col {
+  width: 50%;
+  padding: 30px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-x: auto;
+}
+/* line 64, ../sass/screen.scss */
+.col:first-child {
+  border-right: 1px dotted #ccc;
+}
+
+/* line 69, ../sass/screen.scss */
+.listing {
+  margin-bottom: 10px;
+  background: #fff;
+}
+/* line 73, ../sass/screen.scss */
+.listing .tool {
+  position: absolute;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+}
+/* line 79, ../sass/screen.scss */
+.listing .tool.tool-hide {
+  top: 7px;
+  right: 23px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #aaa;
+  cursor: pointer;
+}
+/* line 89, ../sass/screen.scss */
+.listing .tool.tool-hide:hover {
+  border-bottom-color: #006aa7;
+}
+/* line 93, ../sass/screen.scss */
+.listing .tool.tool-move {
+  background: url(../i/arrow.png) no-repeat;
+  right: 3px;
+  cursor: ns-resize;
+}
+/* line 104, ../sass/screen.scss */
+.listing li {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  margin-bottom: 3px;
+}
+/* line 109, ../sass/screen.scss */
+.listing li > div {
+  padding-right: 5px;
+}
+/* line 111, ../sass/screen.scss */
+.listing li > div:last-child {
+  padding-right: 0;
+}
+/* line 116, ../sass/screen.scss */
+.listing li .btn {
+  font-size: 9px;
+  text-transform: uppercase;
+  background: #ccc;
+  text-decoration: none;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 5px;
+  line-height: 15px;
+  display: block;
+}
+/* line 127, ../sass/screen.scss */
+.listing li .btn:hover {
+  background: #006aa7;
+}
+/* line 133, ../sass/screen.scss */
+.listing li .ticket-description {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}

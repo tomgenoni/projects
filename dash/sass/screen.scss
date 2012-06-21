@@ -1,0 +1,139 @@
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/utilities/";
+
+$tool-padding: 66px;
+$link-color: #006aa7;
+
+
+html, body {
+	height: 100%;
+	font: 11px/17px "Lucida Grande";
+	background: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+
+	&:hover {
+		color: $link-color
+	}
+}
+
+h2 {
+	font-size: 16px;
+	margin-bottom: 12px;
+	padding-right: $tool-padding;
+
+	span {
+		float: right;
+		font-size: 13px;
+	}
+}
+
+h3 {
+	font-size: 11px;
+	margin-bottom: 5px;
+	padding-top: 3px;
+	padding-right: $tool-padding;
+	position: relative;
+	border-top: 1px solid #ddd;
+
+	span {
+		float: right;
+		font-size: 10px;
+		color: #aaa;
+	}
+}
+
+#wrapper {
+	@include display-box;
+	@include box-orient(horizontal);
+	@include box-sizing(border-box);
+	height: 100%;
+}
+
+.col {
+	width: 50%;
+	padding: 30px 20px;
+	@include box-sizing(border-box);
+	height: 100%;
+	overflow-x: auto;
+
+	&:first-child {
+		border-right: 1px dotted #ccc;
+	}
+}
+
+.listing {
+	margin-bottom: 10px;
+	background: #fff;
+
+	.tool {
+		position: absolute;
+		top: 5px;
+		width: 12px;
+		height: 12px;
+
+		&.tool-hide {
+			top: 7px;
+			right: 23px;
+			width: 0; 
+			height: 0; 
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #aaa;
+			cursor: pointer;
+
+			&:hover {
+				border-bottom-color: $link-color;
+			}
+		}
+		&.tool-move {
+			background: url(../i/arrow.png) no-repeat;
+			right: 3px;
+			cursor: ns-resize;
+
+		}
+	}
+
+	ul {
+	}
+
+	li {
+		@include display-box;
+		@include box-orient(horizontal);
+		margin-bottom: 3px;
+
+		> div {
+			padding-right: 5px;
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+
+		.btn {
+			font-size: 9px;
+			text-transform: uppercase;
+			background: #ccc;
+			text-decoration: none;
+			color: #fff;
+			@include border-radius(2px);
+			padding: 0 5px;
+			line-height: 15px;
+			display: block;
+
+			&:hover {
+				background: #006aa7;				
+			}
+
+		}
+
+		.ticket-description {
+			@include box-flex(1);
+			@include ellipsis;
+		}
+
+	}
+}
