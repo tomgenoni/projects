@@ -1,0 +1,261 @@
+/* line 17, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../scss/main.scss */
+body {
+  margin: 0 10px;
+  font: 13px/18px "Helvetica Neue";
+  color: #222;
+}
+
+/* line 9, ../scss/main.scss */
+a {
+  text-decoration: none;
+  color: #19A9E5;
+}
+
+/* line 14, ../scss/main.scss */
+h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* line 18, ../scss/main.scss */
+p {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* line 24, ../scss/main.scss */
+#footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: #999;
+}
+
+/* line 31, ../scss/main.scss */
+#search {
+  background: #f5f5f5;
+  margin: 0 -10px 40px;
+  padding: 30px 10px;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 2px 2px #eeeeee;
+  -moz-box-shadow: 0 2px 2px #eeeeee;
+  box-shadow: 0 2px 2px #eeeeee;
+}
+@media screen and (max-width: 600px) {
+  /* line 31, ../scss/main.scss */
+  #search {
+    padding: 20px 10px;
+  }
+}
+/* line 42, ../scss/main.scss */
+#search input {
+  border: 1px solid #d5d5d5;
+  padding: 5px;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  font-size: 13px;
+  font: 13px/18px "Helvetica Neue";
+  color: #333;
+}
+@media screen and (max-width: 600px) {
+  /* line 42, ../scss/main.scss */
+  #search input {
+    width: 50%;
+  }
+}
+
+/* line 58, ../scss/main.scss */
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 25px;
+}
+/* line 63, ../scss/main.scss */
+table th {
+  text-align: center;
+  padding: 4px 2px 6px;
+  font-size: 11px;
+  color: #888;
+  border-bottom: 2px solid #242b33;
+}
+/* line 70, ../scss/main.scss */
+table th:first-child {
+  background: #fff;
+}
+@media screen and (max-width: 600px) {
+  /* line 63, ../scss/main.scss */
+  table th {
+    font-size: 9px;
+    letter-spacing: 0;
+    line-height: 12px;
+  }
+}
+/* line 80, ../scss/main.scss */
+table th.current {
+  background: #f6f7f9;
+  color: #222;
+}
+/* line 86, ../scss/main.scss */
+table td {
+  text-align: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+/* line 91, ../scss/main.scss */
+table td:first-child {
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  /* line 91, ../scss/main.scss */
+  table td:first-child {
+    font-size: 11px;
+    line-height: 14px;
+  }
+}
+/* line 99, ../scss/main.scss */
+table td:nth-child(4) {
+  background: #f6f7f9;
+}
+/* line 103, ../scss/main.scss */
+table td > span {
+  display: inline-block;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #000;
+  background: #c8e35b;
+  border: 1px solid #b9dc2f;
+  font-size: 11px;
+}
+@media screen and (max-width: 600px) {
+  /* line 103, ../scss/main.scss */
+  table td > span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 9px;
+  }
+}
+/* line 121, ../scss/main.scss */
+table td > span.partial {
+  background: #deee9c url(../i/partial.png) 0 -17px no-repeat;
+  border: 1px dashed #c1df45;
+}
+/* line 125, ../scss/main.scss */
+table td > span.unknown {
+  background: #eee;
+  border: 1px solid #d5d5d5;
+}
+/* line 129, ../scss/main.scss */
+table td > span.not-supported {
+  background: #ffcccc;
+  border: 1px solid #ff9999;
+}
+
+/* line 139, ../scss/main.scss */
+.tabs .tabs-nav {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  height: 31px;
+}
+/* line 144, ../scss/main.scss */
+.tabs .tabs-nav li {
+  border-bottom: none;
+  float: left;
+  position: relative;
+}
+/* line 149, ../scss/main.scss */
+.tabs .tabs-nav li a {
+  display: block;
+  float: left;
+  font-weight: bold;
+  text-shadow: 0 1px 1px #fff;
+  height: 25px;
+  padding: 7px 10px 0;
+  font-size: 13px;
+}
+/* line 158, ../scss/main.scss */
+.tabs .tabs-nav li.active {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  position: relative;
+  top: 0;
+}
+/* line 165, ../scss/main.scss */
+.tabs .tabs-nav li.active a {
+  color: #333;
+  padding: 6px 9px 0;
+}
+/* line 170, ../scss/main.scss */
+.tabs .tab-content {
+  color: #555;
+}
