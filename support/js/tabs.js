@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-	$(".tabs > ul li a").click(function(){
+	$(".tabs > ul li a").click(function(event){
+		event.preventDefault();
 		trigger = $(this);
 		changeTab(trigger);
-		return false;
 	})
 
 	changeTab = function(trigger) {
