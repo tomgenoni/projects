@@ -114,6 +114,7 @@ table {
 			font-size: 11px;
 			background: #eee;
 			border: 1px solid #d5d5d5;
+			position: relative;
 
 			@media screen and (max-width: 600px) {
 				width: 30px;
@@ -122,17 +123,28 @@ table {
 				font-size: 9px;
 			}
 
-			&.supported {
+			&.y, &.a {
 				background: #c8e35b;
 				border: 1px solid darken(#c8e35b,10%);
 			}
-			&.partial {
+			&.p, &.a {
 				background: lighten(#c8e35b,15%) url(../i/partial.png) 0 -17px  no-repeat;
 				border: 1px dashed darken(#c8e35b,5%);
 			}
-			&.not-supported {
+			&.n {
 				background: lighten(#ff9999,10%);
 				border: 1px solid #ff9999;
+			}
+			&.x:after {
+				content: "*";
+				position: absolute;
+				top: 5px;
+				right: -15px;
+				line-height: 12px;
+				font-size: 9px;
+				padding: 0 4px 1px;
+				font-size: 30px;
+				opacity: .5;
 			}
 		}
 	}
@@ -140,10 +152,28 @@ table {
 
 .ui-autocomplete {
 	background: #fff;
-	width: 42%;
+	width: 41%;
 	@include box-shadow(0 0 5px #ccc);
-	padding: 6px;
-	@include box-sizing(border-box);
+	max-height: 300px;
+	overflow: auto;
+
+	a {
+		display: block;
+		padding: 4px 6px;
+		@include box-sizing(border-box);
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+
+	.ui-state-hover, .ui-state-focus { 
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #eee; 
+		color: #333; 
+		outline: none; 
+	}
+
+
 }
 
 
@@ -181,5 +211,11 @@ table {
 
 	.tab-content {
 		color: #555;
+
+		p {
+			margin-bottom: 3px;
+		}
 	}
 }
+
+

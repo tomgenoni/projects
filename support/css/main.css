@@ -199,6 +199,7 @@ table td > span {
   font-size: 11px;
   background: #eee;
   border: 1px solid #d5d5d5;
+  position: relative;
 }
 @media screen and (max-width: 600px) {
   /* line 107, ../scss/main.scss */
@@ -209,48 +210,76 @@ table td > span {
     font-size: 9px;
   }
 }
-/* line 125, ../scss/main.scss */
-table td > span.supported {
+/* line 126, ../scss/main.scss */
+table td > span.y, table td > span.a {
   background: #c8e35b;
   border: 1px solid #b9dc2f;
 }
-/* line 129, ../scss/main.scss */
-table td > span.partial {
+/* line 130, ../scss/main.scss */
+table td > span.p, table td > span.a {
   background: #deee9c url(../i/partial.png) 0 -17px no-repeat;
   border: 1px dashed #c1df45;
 }
-/* line 133, ../scss/main.scss */
-table td > span.not-supported {
+/* line 134, ../scss/main.scss */
+table td > span.n {
   background: #ffcccc;
   border: 1px solid #ff9999;
 }
+/* line 138, ../scss/main.scss */
+table td > span.x:after {
+  content: "*";
+  position: absolute;
+  top: 5px;
+  right: -15px;
+  line-height: 12px;
+  font-size: 9px;
+  padding: 0 4px 1px;
+  font-size: 30px;
+  opacity: .5;
+}
 
-/* line 141, ../scss/main.scss */
+/* line 153, ../scss/main.scss */
 .ui-autocomplete {
   background: #fff;
-  width: 42%;
+  width: 41%;
   -webkit-box-shadow: 0 0 5px #cccccc;
   -moz-box-shadow: 0 0 5px #cccccc;
   box-shadow: 0 0 5px #cccccc;
-  padding: 6px;
+  max-height: 300px;
+  overflow: auto;
+}
+/* line 160, ../scss/main.scss */
+.ui-autocomplete a {
+  display: block;
+  padding: 4px 6px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+/* line 168, ../scss/main.scss */
+.ui-autocomplete .ui-state-hover, .ui-autocomplete .ui-state-focus {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #eee;
+  color: #333;
+  outline: none;
 }
 
-/* line 152, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 .tabs .tabs-nav {
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
   height: 31px;
 }
-/* line 157, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 .tabs .tabs-nav li {
   border-bottom: none;
   float: left;
   position: relative;
 }
-/* line 162, ../scss/main.scss */
+/* line 192, ../scss/main.scss */
 .tabs .tabs-nav li a {
   display: block;
   float: left;
@@ -259,7 +288,7 @@ table td > span.not-supported {
   padding: 7px 10px 0;
   font-size: 13px;
 }
-/* line 170, ../scss/main.scss */
+/* line 200, ../scss/main.scss */
 .tabs .tabs-nav li.active {
   background: #fff;
   border: 1px solid #ddd;
@@ -267,12 +296,16 @@ table td > span.not-supported {
   position: relative;
   top: 0;
 }
-/* line 177, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 .tabs .tabs-nav li.active a {
   color: #333;
   padding: 6px 9px 0;
 }
-/* line 182, ../scss/main.scss */
+/* line 212, ../scss/main.scss */
 .tabs .tab-content {
   color: #555;
+}
+/* line 215, ../scss/main.scss */
+.tabs .tab-content p {
+  margin-bottom: 3px;
 }
