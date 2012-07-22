@@ -32,7 +32,7 @@
 		color: #666;
 	}
 
-	#data-panel {
+	#panel {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -51,7 +51,14 @@
 
 	$(window).load(function(){
 
-		$("<div id='data-panel'>data panel</div>'").appendTo("body");
+		$("<div id='panel'>data panel</div>'").appendTo("body");
+
+		var textImgLength = $(".text-image").length;
+		console.log(textImgLength);
+
+		$(".text-image").each(function(i){
+			$(this).attr("data-index",i);
+		})
 
 		function showLabels() {
 			$(".text-image-label").remove();
@@ -66,12 +73,14 @@
 			})
 		}
 
-		$("img.text-image").click(function(){
+		$(".text-image").click(function(){
 			if ( $(this).hasClass("active") ) {
 				$(this).removeClass("active");
 				$(".active-halo").fadeOut();
 			} else {
-				$(".text-image").removeClass("active");
+				var imgIndex = $(this).attr("data-index")
+				$(".text-image").removeClass("active").removeAttr("data-focus");
+				$(this).attr("data-focus","true");
 				$(this).addClass("active");
 				addBorder();
 			}
@@ -93,25 +102,46 @@
 			}).fadeIn("fast");
 		}
 
-		$(document).keypress(function(e) {
+		$(document).keydown(function(e) {
 
 			if ( $(".active").length ) {
 				var curWidth = $(".active").width();
 				var curHeight = $(".active").height();
 				$(".active-halo").height(curHeight);
 
-				if (e.which == 99) {
+
+				var index = Number($(".text-image[data-focus='true']").attr("data-index"));
+
+				if (e.keyCode == 39) {
 					$(".active, .active-halo").width( curWidth + 1);
 				}
-				if (e.which == 101) {
+				if (e.keyCode == 37) {
 					$(".active, .active-halo").width( curWidth - 1);
 				}
+
+				if ( e.keyCode == 38 || e.keyCode == 40 ) {
+
+					if (e.keyCode == 38) {
+						var index = index - 1;
+					}
+					if (e.keyCode == 40) {
+						var index = index + 1;
+					}
+
+					if ( !(index < 0) && !(index == textImgLength) ) {
+						$(".text-image[data-focus='true']").removeAttr("data-focus");
+						$('html,body').animate({scrollTop: $(".text-image[data-index='"+index+"']").offset().top }, "fast");
+						$(".text-image[data-index='"+index+"']").attr("data-focus","true");
+					}
+
+				}
+				return false;
 			}
 		});
 
 		$(document).keyup(function(e) {
 			if ( $(".active").length ) {
-				if (e.which == 67 || e.which == 69) {
+				if (e.keyCode == 39 || e.keyCode == 37) {
 					addBorder();
 					showLabels();
 				}
