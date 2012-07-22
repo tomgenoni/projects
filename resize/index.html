@@ -30,14 +30,7 @@
 
 	.text-image-label {
 		position: absolute;
-		font: 10px/13px "Lucida Grande", Verdana, sans;
-		background: #2a739b;
-		color: #fff;
-		width: 16px;
-		height: 16px;
-		line-height: 16px;
-		border-radius: 100%;
-		text-align: center;
+		font: 9px/13px "Lucida Grande", Verdana, sans;
 		z-index: 100000;
 	}
 
@@ -61,6 +54,8 @@
 
 	$(window).load(function(){
 
+		var srcArr = new Array();
+
 		$("<div id='panel'>data panel</div>'").appendTo("body");
 
 		var textImgLength = $(".text-image").length;
@@ -69,15 +64,23 @@
 			$(this).attr("data-index",i);
 		})
 
+		function getClassName(target) {
+			var elClass = $(target).attr("src");
+			srcArr = elClass.split("/");
+			var imgName = srcArr[srcArr.length-1];
+			className = imgName.replace(".png","");
+		}
+
 		function showLabels() {
 			$(".text-image-label").remove();
 			$(".text-image").each(function(i){
+				getClassName(this);
 				var offset = $(this).offset();
 				var elHeight = $(this).height();
 				var elWidth = $(this).width();
-				$("<div class='text-image-label'>"+(i+1)+"</div>").appendTo("body").css({
+				$("<div class='text-image-label'>"+className+"</div>").appendTo("body").css({
 					top: offset.top,
-					left: 10
+					left: 5
 				});
 			})
 		}
