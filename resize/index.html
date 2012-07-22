@@ -123,6 +123,8 @@
 			}
 			if ( e.keyCode == 38 || e.keyCode == 40 ) {
 
+				$(".text-image").removeClass("active");
+				$(".active-halo").fadeOut();
 				var index = Number($(".text-image[data-focus='true']").attr("data-index"));
 
 				if (e.keyCode == 38) {
@@ -131,8 +133,6 @@
 				if (e.keyCode == 40) {
 					var index = index + 1;
 				}
-
-				console.log(index);
 
 				if ( !(index < 0) && !(index == textImgLength) ) {
 					$('html,body').animate({scrollTop: $(".text-image[data-index='"+index+"']").offset().top - 20 }, "fast");
