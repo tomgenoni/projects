@@ -1,0 +1,131 @@
+<!doctype html>
+<head>
+
+	<style type="text/css">
+
+	body {
+		margin: 100px;
+	}
+
+	img {
+		width: 40em;
+		height: auto;
+		-webkit-box-sizing: border-box;
+	}
+	.active-halo {
+		position: absolute;
+		display: none;
+		pointer-events: none;
+		background: url(bkg.png);
+	}
+
+	.active-halo:before {
+		content: "Text Image";
+		position: absolute;
+		top: 0;
+		left: -60px;
+		font: 10px/13px "Lucida Grande", Verdana, sans;
+		color: #666;
+	}
+
+	#data-panel {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 7px 15px;
+		background: #fff;
+		z-index: 99999;
+		box-shadow: 0 0 7px #aaa;
+	}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$("<div id='data-panel'>data panel</div>'").appendTo("body");
+
+
+		$("img.text-image").click(function(){
+			if ( $(this).hasClass("active") ) {
+				$(this).removeClass("active");
+				$(".active-halo").fadeOut();
+			} else {
+				$(".text-image").removeClass("active");
+				$(this).addClass("active");
+				addBorder();
+			}
+			return false;
+		});
+
+		function addBorder(){
+			if ( !($(".active-halo").length) ) {
+				$("<div class='active-halo'></div>").appendTo("body");
+			}
+			var pos = $(".active").position();
+			var activeWidth = $(".active").width();
+			var activeHeight = $(".active").height();
+			$(".active-halo").css({
+				top: pos.top, 
+				left: pos.left,
+				width: activeWidth,
+				height: activeHeight
+			}).fadeIn("fast");
+		}
+
+		$(document).keypress(function(e) {
+			var curWidth = $(".active").width();
+			var curHeight = $(".active").height();
+			$(".active-halo").height(curHeight);
+
+			if (e.which == 99) {
+				$(".active, .active-halo").width( curWidth + 1);
+			}
+			if (e.which == 101) {
+				$(".active, .active-halo").width( curWidth - 1);
+			}
+		});
+
+		$(document).keyup(function(e) {
+			if (e.which == 67 || e.which == 69) {
+				addBorder();
+			}
+		});
+
+	}); 
+
+
+
+
+</script>
+
+</head>
+<body>
+
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<img src="1-slice.jpg" class="text-image slice-1" alt="">
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<img src="2-slice.jpg" class="slice-2 text-image" alt="">
+
+
+
+</body>
+</html>
