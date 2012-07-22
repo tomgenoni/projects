@@ -12,6 +12,7 @@
 		width: 35em;
 		height: auto;
 		margin: 1em auto;
+		display: block;
 	}
 
 	.text-image {
@@ -19,8 +20,8 @@
 	}
 
 	.active-halo {
-		position: absolute;
 		display: none;
+		position: absolute;
 		pointer-events: none;
 		background: url(bkg.png);
 		padding: 9px;
@@ -47,6 +48,7 @@
 		background: #fff;
 		z-index: 99999;
 		box-shadow: 0 0 7px #aaa;
+		font: 11px/15px "Lucida Grande";
 	}
 
 	</style>
@@ -81,7 +83,7 @@
 		$(".text-image").click(function(){
 			if ( $(this).hasClass("active") ) {
 				$(this).removeClass("active");
-				$(".active-halo").fadeOut();
+				$(".active-halo").hide();
 			} else {
 				$(".text-image").removeClass("active").removeAttr("data-focus");
 				$(this).attr("data-focus","true");
@@ -95,13 +97,14 @@
 			if ( !($(".active-halo").length) ) {
 				$("<div class='active-halo'></div>").appendTo("body");
 			}
+			$(".active-halo").hide();
 			var offset = $(".active").offset();
 			var activeWidth = $(".active").width();
 			var activeHeight = $(".active").height();
 			$(".active-halo").css({
 				top: offset.top - 5, 
-				left: offset.left - 5,
-				width: activeWidth,
+				left: 0,
+				right: 0,
 				height: activeHeight
 			}).fadeIn("fast");
 		}
@@ -113,11 +116,16 @@
 				var curHeight = $(".active").height();
 				$(".active-halo").height(curHeight);
 
-				if (e.keyCode == 39) {
-					$(".active, .active-halo").width( curWidth + 1);
-				}
-				if (e.keyCode == 37) {
-					$(".active, .active-halo").width( curWidth - 1);
+				if (e.keyCode == 39 || e.keyCode == 37) {
+					if (e.keyCode == 39) {
+						var newWidth = curWidth + 1;
+					}
+					if (e.keyCode == 37) {
+						var newWidth = curWidth - 1;
+					}
+				
+					$(".active").width( newWidth );
+					return false;
 				}
 
 			}
@@ -135,13 +143,14 @@
 				}
 
 				if ( !(index < 0) && !(index == textImgLength) ) {
-					$('html,body').animate({scrollTop: $(".text-image[data-index='"+index+"']").offset().top - 20 }, "fast");
-					$(".text-image[data-focus='true']").removeAttr("data-focus");
-					$(".text-image[data-index='"+index+"']").attr("data-focus","true");
+					$('html,body').animate({scrollTop: $(".text-image[data-index='"+index+"']").offset().top - 200 }, "fast");
+					$(".text-image[data-focus='true']").click();
+					$(".text-image[data-index='"+index+"']").click();
 				}
 
+				return false;
+
 			}
-			return false;
 		});
 
 		$(document).keyup(function(e) {
@@ -174,22 +183,6 @@
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<img src="ch05_115_eq01.png" class="text-image ch05_115_eq01" alt="">
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
