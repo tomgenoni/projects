@@ -4,26 +4,30 @@
 	<style type="text/css">
 
 	body {
-		margin: 100px;
+		margin: 50px 20px 50px 83px;
+		font: 19px/23px Georgia;
 	}
 
-	img {
-		width: 40em;
+	.ch05_115_eq01, .ch05_116_eq01 {
+		width: 35em;
 		height: auto;
-		-webkit-box-sizing: border-box;
+		margin: 1em auto;
 	}
+
+	.text-image {
+		cursor: pointer;
+	}
+
 	.active-halo {
 		position: absolute;
 		display: none;
 		pointer-events: none;
 		background: url(bkg.png);
+		padding: 9px;
 	}
 
-	.active-halo:before {
-		content: "Text Image";
+	.text-image-label {
 		position: absolute;
-		top: 0;
-		left: -60px;
 		font: 10px/13px "Lucida Grande", Verdana, sans;
 		color: #666;
 	}
@@ -45,10 +49,22 @@
 
 	<script type="text/javascript">
 
-	$(document).ready(function(){
+	$(window).load(function(){
 
 		$("<div id='data-panel'>data panel</div>'").appendTo("body");
 
+		function showLabels() {
+			$(".text-image-label").remove();
+			$(".text-image").each(function(){
+				var offset = $(this).offset();
+				var elHeight = $(this).height();
+				var elWidth = $(this).width();
+				$("<div class='text-image-label'>Text Image</div>").appendTo("body").css({
+					top: offset.top,
+					left: 3
+				});
+			})
+		}
 
 		$("img.text-image").click(function(){
 			if ( $(this).hasClass("active") ) {
@@ -66,35 +82,43 @@
 			if ( !($(".active-halo").length) ) {
 				$("<div class='active-halo'></div>").appendTo("body");
 			}
-			var pos = $(".active").position();
+			var offset = $(".active").offset();
 			var activeWidth = $(".active").width();
 			var activeHeight = $(".active").height();
 			$(".active-halo").css({
-				top: pos.top, 
-				left: pos.left,
+				top: offset.top - 5, 
+				left: offset.left - 5,
 				width: activeWidth,
 				height: activeHeight
 			}).fadeIn("fast");
 		}
 
 		$(document).keypress(function(e) {
-			var curWidth = $(".active").width();
-			var curHeight = $(".active").height();
-			$(".active-halo").height(curHeight);
 
-			if (e.which == 99) {
-				$(".active, .active-halo").width( curWidth + 1);
-			}
-			if (e.which == 101) {
-				$(".active, .active-halo").width( curWidth - 1);
+			if ( $(".active").length ) {
+				var curWidth = $(".active").width();
+				var curHeight = $(".active").height();
+				$(".active-halo").height(curHeight);
+
+				if (e.which == 99) {
+					$(".active, .active-halo").width( curWidth + 1);
+				}
+				if (e.which == 101) {
+					$(".active, .active-halo").width( curWidth - 1);
+				}
 			}
 		});
 
 		$(document).keyup(function(e) {
-			if (e.which == 67 || e.which == 69) {
-				addBorder();
+			if ( $(".active").length ) {
+				if (e.which == 67 || e.which == 69) {
+					addBorder();
+					showLabels();
+				}
 			}
 		});
+
+		showLabels();
 
 	}); 
 
@@ -114,7 +138,7 @@
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<img src="1-slice.jpg" class="text-image slice-1" alt="">
+	<img src="ch05_115_eq01.png" class="text-image ch05_115_eq01" alt="">
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -123,7 +147,11 @@
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<img src="2-slice.jpg" class="slice-2 text-image" alt="">
+	<img src="ch05_116_eq01.png" class="text-image ch05_116_eq01" alt="">
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 
 
