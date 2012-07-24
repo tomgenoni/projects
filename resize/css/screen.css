@@ -1,0 +1,80 @@
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+body {
+	margin: 50px 20px 50px 83px;
+	font: 19px/23px Georgia;
+}
+
+.ch05_115_eq01, .ch05_116_eq01 {
+	width: 35em;
+	height: auto;
+	margin: 1em auto;
+	display: block;
+}
+
+.text-image {
+	cursor: pointer;
+}
+
+.active-halo {
+	display: none;
+	position: absolute;
+	pointer-events: none;
+	background: url(../i/bkg.png);
+	padding: 10px 0;
+	opacity: .15;
+	z-index: 100;
+}
+
+.text-image-label {
+	position: absolute;
+	font: 9px/13px "Lucida Grande", Verdana, sans;
+	color: #666;
+	z-index: 101;
+}
+.text-image-label b {
+	color: #555;
+	font-size: 10px;
+}
+
+#panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0 15px;
+	background: #222;
+	color: #fff;
+	z-index: 102;
+	box-shadow: 0 0 7px #aaa;
+	font: 11px/15px "Lucida Grande";
+	list-style: none;
+	display: -webkit-box;
+	border-bottom: 1px solid #111;
+}
+
+#panel li {
+	padding: 9px 15px 0;
+	position: relative;
+}
+#panel li:nth-child(2) {
+	-webkit-box-flex: 1;
+}
+
+#panel li:last-child {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#panel li #btn-done {
+	display: block;
+	background-image: -webkit-linear-gradient(top, #666, #333);
+	color: #fff;
+	padding: 4px 20px 7px;
+	line-height: 13px;
+	border: 1px solid #111;
+	border-radius: 3px;
+}
