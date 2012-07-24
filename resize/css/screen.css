@@ -61,16 +61,12 @@ body {
 	padding: 9px 15px 0;
 	position: relative;
 }
-#panel li:nth-child(2) {
-	-webkit-box-flex: 1;
-}
 
-#panel li:last-child {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-#panel li #btn-done {
+
+#panel li .btn {
 	display: block;
+	position: relative;
+	top: -4px;
 	background-image: -webkit-linear-gradient(top, #666, #333);
 	color: #fff;
 	padding: 4px 20px 7px;

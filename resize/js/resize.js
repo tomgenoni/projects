@@ -25,7 +25,7 @@ $(window).load(function(){
 			return false;
 		});
 
-		$("<ul id='panel'><li><b>Frommer's Name of Book</b></li><li>Text Images on Card: "+textImgLength+"</li><li><span class='autosave'>Saving...</span></li><li><a href='#' id='btn-done'>Export</a></li></ul>'").appendTo("body");
+		$("<ul id='panel'><li><b>Frommer's Name of Book</b></li><li>Text Images on Card: "+textImgLength+"</li><li><span class='autosave'>Saving...</span></li><li><a href='#' class='btn' id='btn-done'>Update from SVN</a></li><li><a href='#' class='btn' id='btn-done'>Export</a></li></ul>'").appendTo("body");
 
 
 		function getClassName(target) {
