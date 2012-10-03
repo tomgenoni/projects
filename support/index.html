@@ -6,8 +6,20 @@
 	<link rel="stylesheet" href="css/main.css">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js" type="text/javascript"></script>
+	<script src="js/jquery.ui.autocomplete.html.js" type="text/javascript"></script>
+	<script src="js/autocomplete.js" type="text/javascript"></script>
+	<script src="js/tabs.js" type="text/javascript"></script>
+
+
 </head>
 <body>
+	<div id="header">
+		<span class="credit">Data provided by <a href="http://caniuse.com/">caniuse.com</a></span>
+		<a href="index.html" id="logo">Inkling Browser Support Grids</a>
+	</div>
 
 	<div id="search">
 		<input id="tags" type="text">
@@ -23,7 +35,6 @@
 			<thead>
 				<tr>
 					<th></th>
-					<th colspan="2"><span>Past</span></th>
 					<th class="current"><span>Current</span></th>
 					<th colspan="2"><span>Future</span></th>
 				</tr>	
@@ -31,60 +42,34 @@
 			<tbody>
 				<tr>
 					<td>Internet Explorer</td>
-					<td class="ie-7"><span>7</span></td>
-					<td class="ie-8"><span>8</span></td>
 					<td class="ie-9"><span>9</span></td>
 					<td class="ie-10"><span>10</span></td>
 					<td></td>
 				</tr>
  				<tr>
 					<td>Firefox</td>
-					<td class="ff-3-6"><span>3.6</span></td>
-					<td class="ff-12"><span>12.0</span></td>
 					<td class="ff-13"><span>13.0</span></td>
 					<td class="ff-14"><span>14.0</span></td>
 					<td class="ff-15"><span>15.0</span></td>
 				</tr>
 				<tr>
 					<td>Chrome</td>
-					<td></td>
-					<td></td>
 					<td class="ch-19"><span>19.0</span></td>
 					<td class="ch-20"><span>20.0</span></td>
 					<td class="ch-21"><span>21.0</span></td>
 				</tr>
 				<tr>
 					<td>Safari</td>
-					<td></td>
-					<td></td>
 					<td class="sa-5-1"><span>5.1</span></td>
 					<td class="sa-5-2"><span>5.2</span></td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>Opera</td>
-					<td></td>
-					<td></td>
-					<td class="op-12"><span>12.0</span></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
 					<td>iOS Safari</td>
-					<td></td>
-					<td></td>
 					<td class="is-5"><span>5.0</span></td>
-					<td></td>
+					<td class="is-6"><span>6.0</span></td>
 					<td></td>
 				</tr>
-				<tr>
-					<td>Android Browser</td>
-					<td class="an-2-3"><span>2.3</span></td>
-					<td class="an-3"><span>3.0</span></td>
-					<td class="an-4"><span>4.0</span></td>
-					<td></td>
-					<td></td>
-				</tr> 
 			</tbody>
 		</table>
 
@@ -92,21 +77,23 @@
 			<ul class="tabs-nav clearfix">
 				<li class="active"><a href="#">Notes</a></li>
 				<li><a href="#">Resources</a></li> 
+				<li><a href="#">Legend</a></li> 
 			</ul>
-			<div class="tab-content">
-				Incomplete support by older webkit browsers refers to only acknowledging different media rules on page reload.
-			</div>
+			<div class="tab-content"></div>
 			<div class="tab-content" style="display:none"></div>
+			<div class="tab-content" style="display:none">
+				<ul>
+					<li><span class="y"></span> = Full Support</li>
+					<li><span class="a"></span> = Partial Support</li>
+					<li><span class="n"></span> = No Support</li>
+					<li><span></span> = Support Unknown</li>
+					<li>* = Notes</li>
+				</ul>
+				
+			</div>
 		</div>
 
 	</div>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js" type="text/javascript"></script>
-	<script src="js/tabs.js" type="text/javascript"></script>
-	<script src="js/autocomplete.js" type="text/javascript"></script>
-
 
 </body>
 </html>

@@ -1,6 +1,53 @@
 @import "compass/css3";
 @import "compass/reset";
 
+@mixin legend {
+	> span {
+		display: inline-block;
+		border-radius: 100%;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		color: #000;
+		font-size: 11px;
+		background: #eee;
+		border: 1px solid #d5d5d5;
+		position: relative;
+
+		@media screen and (max-width: 600px) {
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 9px;
+		}
+
+		&.y, &.a {
+			background: #c8e35b;
+			border: 1px solid darken(#c8e35b,10%);
+		}
+		&.p, &.a {
+			background: lighten(#c8e35b,15%) url(../i/partial.png) 0 -17px  no-repeat;
+			border: 1px dashed darken(#c8e35b,5%);
+		}
+		&.n {
+			background: lighten(#ff9999,10%);
+			border: 1px solid #ff9999;
+		}
+		&.x:after {
+			content: "*";
+			position: absolute;
+			top: 5px;
+			right: -15px;
+			line-height: 12px;
+			font-size: 9px;
+			padding: 0 4px 1px;
+			font-size: 30px;
+			opacity: .5;
+		}
+	}
+}
+
+
 body {
 	margin: 0 10px;
 	font: 13px/18px "Helvetica Neue";
@@ -21,6 +68,39 @@ p {
 	color: #666;
 }
 
+#header {
+	padding: 10px 15px;
+	margin: 0 -10px;
+	border-bottom: 1px dotted #ddd;
+	background: #f9f9f9;
+
+	#logo {
+		font-size: 13px;
+		color: #999;
+	}
+
+	.credit {
+		float: right;
+		color: #aaa;
+		font-size: 9px;
+
+		a {
+			color: #aaa;
+			text-decoration: underline;
+		}
+	}
+}
+
+#default {
+	text-align: center;
+
+	h1 {
+		font-size: 28px;
+		line-height: normal;
+		margin-bottom: 7px;
+	}
+}
+
 #footer {
 	margin-top: 60px;
 	margin-bottom: 20px;
@@ -33,25 +113,22 @@ p {
 }
 
 #search {
-	background: #f5f5f5;
 	margin: 0 -10px 40px;
 	padding: 30px 10px;
-	border-bottom: 1px solid #ddd;
-	@include box-shadow(0 2px 2px #eee);
 
 	@media screen and (max-width: 600px) {
 		padding: 20px 10px;
 	}
 
 	input {
-		border: 1px solid #d5d5d5;
-		padding: 5px;
+		border: 3px solid #d5d5d5;
+		padding: 5px 10px;
 		width: 40%;
 		display: block;
 		margin: 0 auto;
-		font-size: 13px;
-		font: 13px/18px "Helvetica Neue";
+		font: 18px/18px "Helvetica Neue";
 		color: #333;
+		outline: none;
 
 		@media screen and (max-width: 600px) {
 			width: 50%;
@@ -100,53 +177,12 @@ table {
 			}
 		}
 
-		&:nth-child(4) {
+		&:nth-child(2) {
 			background: lighten(#242b33,80%);
 		}
 
-		> span {
-			display: inline-block;
-			border-radius: 100%;
-			width: 35px;
-			height: 35px;
-			line-height: 35px;
-			color: #000;
-			font-size: 11px;
-			background: #eee;
-			border: 1px solid #d5d5d5;
-			position: relative;
+		@include legend;
 
-			@media screen and (max-width: 600px) {
-				width: 30px;
-				height: 30px;
-				line-height: 30px;
-				font-size: 9px;
-			}
-
-			&.y, &.a {
-				background: #c8e35b;
-				border: 1px solid darken(#c8e35b,10%);
-			}
-			&.p, &.a {
-				background: lighten(#c8e35b,15%) url(../i/partial.png) 0 -17px  no-repeat;
-				border: 1px dashed darken(#c8e35b,5%);
-			}
-			&.n {
-				background: lighten(#ff9999,10%);
-				border: 1px solid #ff9999;
-			}
-			&.x:after {
-				content: "*";
-				position: absolute;
-				top: 5px;
-				right: -15px;
-				line-height: 12px;
-				font-size: 9px;
-				padding: 0 4px 1px;
-				font-size: 30px;
-				opacity: .5;
-			}
-		}
 	}
 }
 
@@ -163,6 +199,10 @@ table {
 		@include box-sizing(border-box);
 		border-top: 1px solid #fff;
 		border-bottom: 1px solid #fff;
+
+		span {
+			display: none;
+		}
 	}
 
 	.ui-state-hover, .ui-state-focus { 
@@ -176,6 +216,7 @@ table {
 
 }
 
+// Tabs
 
 .tabs {
 	
@@ -214,6 +255,25 @@ table {
 
 		p {
 			margin-bottom: 3px;
+		}
+
+		ul li {
+
+			display: inline-block;
+			margin-right: 20px;
+
+			@include legend;
+
+			> span {
+				height: 20px;
+				width: 20px;
+				position: relative;
+				top: 6px;
+
+				&.p, &.a {
+					background-position: 0 -25px;
+				}
+			}
 		}
 	}
 }
